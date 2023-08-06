@@ -149,10 +149,26 @@ function checkAnswer() {
 
   if (correctAnswer === selectedAnswer) {
     alert("You got the answer correct!");
+    incrementScore()
   } else {
     alert(`Oh no, you got it wrong!!`);
+    incrementWrongAnswer()
   }
 
+  
   currentQuestionIndex++;
   showQuestion();
 }
+
+ function incrementScore() {
+   let oldScore = parseInt(document.getElementById("correctAnswers").innerText);
+   document.getElementById("correctAnswers").innerText = ++oldScore;
+ }
+
+
+function incrementWrongAnswer() {
+    let oldScore = parseInt(
+      document.getElementById("incorrectAnswers").innerText
+    );
+    document.getElementById("incorrectAnswers").innerText = ++oldScore;
+  }
