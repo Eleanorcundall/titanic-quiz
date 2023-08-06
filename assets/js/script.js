@@ -2,7 +2,7 @@ let questions = [
   {
     question: "What was the Titanics official name?",
     choices: ["Royal Mail Ship", "Royal Marine Ship", "Racing Marine Steamer"],
-    answer: "0",
+    answer: "0", // The index of the correct answer choice
   },
   {
     question: "Where was the Titanic built? ",
@@ -95,21 +95,20 @@ let questions = [
   },
   {
     question: "How many dogs survived the sinking?",
-    choices: [
-      "3",
-      "6",
-      "12",
-    ],
+    choices: ["3", "6", "12"],
     answer: "2",
   },
 ];
+// Keeps track of current question
 let currentQuestionIndex = 0;
 
+// Event listener to execute showQuestion function when the DOM is loaded
 document.addEventListener("DOMContentLoaded", showQuestion);
 
 let submitButton = document.getElementById("submit");
 submitButton.addEventListener("click", checkAnswer);
 
+// Function to display the current question and answer choices
 function showQuestion() {
   let questionContainer = document.getElementById("displayQuestions");
   questionContainer.innerHTML = ""; // Clear existing question
@@ -136,7 +135,7 @@ function showQuestion() {
   }
 }
 
-
+// Function to check the selected answer and provide feedback
 function checkAnswer() {
   let selectedAnswer;
   let correctAnswer = questions[currentQuestionIndex].answer;
