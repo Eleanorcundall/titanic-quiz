@@ -51,3 +51,25 @@ function showQuestion() {
     questionContainer.appendChild(choiceContainer);
   }
 }
+
+
+function checkAnswer() {
+  let selectedAnswer;
+  let correctAnswer = questions[currentQuestionIndex].answer;
+  let allAnswers = document.getElementsByName("choices");
+  for (let i = 0; i < allAnswers.length; i++) {
+    if (allAnswers[i].checked) {
+      selectedAnswer = i.toString();
+      break;
+    }
+  }
+
+  if (correctAnswer === selectedAnswer) {
+    alert("You got the answer correct!");
+  } else {
+    alert(`Oh no, you got it wrong!!`);
+  }
+
+  currentQuestionIndex++;
+  showQuestion();
+}
