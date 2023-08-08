@@ -3,7 +3,7 @@ body{
 	font-family: sans-serif;
 	
 	color: whitesmoke;
-	background-image: url(/assets/images/titanic-bg.jpg);
+	background-image: url(../images/titanic-bg.jpg);
 	background-repeat: no-repeat; 
 	background-size: cover;
 	

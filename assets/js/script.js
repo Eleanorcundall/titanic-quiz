@@ -1,4 +1,4 @@
-let questions = [
+const questions = [
   {
     question: "What was the Titanics official name?",
     choices: ["Royal Mail Ship", "Royal Marine Ship", "Racing Marine Steamer"],
