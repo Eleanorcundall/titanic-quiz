@@ -7,9 +7,9 @@ let questions = [
   {
     question: "Where was the Titanic built? ",
     choices: [
-      "In the Harland and Wolff Shipyard, Belfast, Northern Ireland ",
+      "In the Harland and Wolff Shipyard, Belfast, Northern Ireland",
       "In the Suez Shipyard, Egypt",
-      " In the Western Marine Shipyard, Bangladesh",
+      "In the Western Marine Shipyard, Bangladesh",
     ],
     answer: "0",
   },
@@ -99,8 +99,11 @@ let questions = [
     answer: "2",
   },
 ];
-// Keeps track of current question
-let currentQuestionIndex = 0;
+// Initialises randomIndex for question selection
+let randomIndex = 0;
+
+// Initialises empty array to store random questions
+let selectedQuestions = [];
 
 // Event listener to execute showQuestion function when the DOM is loaded
 document.addEventListener("DOMContentLoaded", showQuestion);
@@ -113,11 +116,31 @@ function showQuestion() {
   let questionContainer = document.getElementById("displayQuestions");
   questionContainer.innerHTML = ""; // Clear existing question
 
+  let randomQuestions = [...questions];
+
+  // Shuffle the copy of the questions array
+  for (let i = randomQuestions.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * i);
+    [
+      randomQuestions[i],
+      randomQuestions[j]
+    ] = [
+      randomQuestions[j],
+      randomQuestions[i],
+    ];
+  }
+
+  // Get the first 10 questions from the shuffled array
+  selectedQuestions = randomQuestions.slice(0, 10);
+
+  // Get a random index within the range of the selected questions
+  randomIndex = Math.floor(Math.random() * selectedQuestions.length);
+
   let questionText = document.createElement("p");
-  questionText.textContent = questions[currentQuestionIndex].question;
+  questionText.textContent = selectedQuestions[randomIndex].question;
   questionContainer.appendChild(questionText);
 
-  let answerChoices = questions[currentQuestionIndex].choices;
+  let answerChoices = selectedQuestions[randomIndex].choices;
   for (let i = 0; i < answerChoices.length; i++) {
     let choiceContainer = document.createElement("div");
 
@@ -138,7 +161,7 @@ function showQuestion() {
 // Function to check the selected answer and provide feedback
 function checkAnswer() {
   let selectedAnswer;
-  let correctAnswer = questions[currentQuestionIndex].answer;
+  let correctAnswer = selectedQuestions[randomIndex].answer;
   let allAnswers = document.getElementsByName("choices");
   for (let i = 0; i < allAnswers.length; i++) {
     if (allAnswers[i].checked) {
@@ -149,26 +172,50 @@ function checkAnswer() {
 
   if (correctAnswer === selectedAnswer) {
     alert("You got the answer correct!");
-    incrementScore()
+    incrementScore();
   } else {
     alert(`Oh no, you got it wrong!!`);
-    incrementWrongAnswer()
+    incrementWrongAnswer();
   }
-
-  
-  currentQuestionIndex++;
+  endQuiz();
+  randomIndex++;
   showQuestion();
 }
+// increments correct answers
+function incrementScore() {
+  let oldScore = parseInt(document.getElementById("correctAnswers").innerText);
+  document.getElementById("correctAnswers").innerText = ++oldScore;
+}
 
- function incrementScore() {
-   let oldScore = parseInt(document.getElementById("correctAnswers").innerText);
-   document.getElementById("correctAnswers").innerText = ++oldScore;
- }
-
-
+// increments incorrect answers
 function incrementWrongAnswer() {
-    let oldScore = parseInt(
-      document.getElementById("incorrectAnswers").innerText
-    );
-    document.getElementById("incorrectAnswers").innerText = ++oldScore;
+  let oldScore = parseInt(
+    document.getElementById("incorrectAnswers").innerText
+  );
+  document.getElementById("incorrectAnswers").innerText = ++oldScore;
+}
+
+function endQuiz() {
+  let correctAnswers = parseInt(
+    document.getElementById("correctAnswers").innerText
+  );
+  let incorrectAnswers = parseInt(
+    document.getElementById("incorrectAnswers").innerText
+  );
+
+  if (correctAnswers + incorrectAnswers >= 10) {
+    let quizResults = document.createElement("p");
+    quizResults.innerHTML = `Well done! you got ${correctAnswers} out of 15!!`;
+    let resultContainer = document.createElement("div");
+    resultContainer.appendChild(quizResults);
+    let targetElement = document.getElementById("quizArea");
+    removeAllChildren(targetElement);
+
+    document.body.appendChild(resultContainer);
   }
+  function removeAllChildren(element) {
+    while (element.firstChild) {
+      element.removeChild(element.firstChild);
+    }
+  }
+}
