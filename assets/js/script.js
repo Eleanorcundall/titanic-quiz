@@ -116,22 +116,14 @@ function showQuestion() {
   let questionContainer = document.getElementById("displayQuestions");
   questionContainer.innerHTML = ""; // Clear existing question
 
-  let randomQuestions = [...questions];
-
-
-  // Get the first 10 questions from the shuffled array
-  selectedQuestions = randomQuestions.slice(0, 10);
-
-  // Get a random index within the range of the selected questions
-  randomIndex = Math.floor(Math.random() * selectedQuestions.length);
 
   
 
   let questionText = document.createElement("p");
-  questionText.textContent = selectedQuestions[randomIndex].question;
+  questionText.textContent = questions[randomIndex].question;
   questionContainer.appendChild(questionText);
 
-  let answerChoices = selectedQuestions[randomIndex].choices;
+  let answerChoices = questions[randomIndex].choices;
   for (let i = 0; i < answerChoices.length; i++) {
     let choiceContainer = document.createElement("div");
 
@@ -152,7 +144,7 @@ function showQuestion() {
 // Function to check the selected answer and provide feedback
 function checkAnswer() {
   let selectedAnswer;
-  let correctAnswer = selectedQuestions[randomIndex].answer;
+  let correctAnswer = questions[randomIndex].answer;
   let allAnswers = document.getElementsByName("choices");
   for (let i = 0; i < allAnswers.length; i++) {
     if (allAnswers[i].checked) {
@@ -194,7 +186,7 @@ function endQuiz() {
     document.getElementById("incorrectAnswers").innerText
   );
 
-  if (correctAnswers + incorrectAnswers >= 10) {
+  if (correctAnswers + incorrectAnswers >= 15) {
     let quizResults = document.createElement("p");
     quizResults.innerHTML = `Well done! you got ${correctAnswers} out of 15!!`;
     let resultContainer = document.createElement("div");
