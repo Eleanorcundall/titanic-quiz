@@ -99,7 +99,7 @@ const questions = [
     answer: "2",
   },
 ];
-// Keeps track of current Question
+// keeps track of current question
 let currentQuestionIndex = 0;
 
 // Event listener to execute showQuestion function when the DOM is loaded
@@ -114,13 +114,11 @@ function showQuestion() {
   questionContainer.innerHTML = ""; // Clear existing question
 
 
-  
-
   let questionText = document.createElement("p");
-  questionText.textContent = questions[randomIndex].question;
+  questionText.textContent = questions[currentQuestionIndex].question;
   questionContainer.appendChild(questionText);
 
-  let answerChoices = questions[randomIndex].choices;
+  let answerChoices = questions[currentQuestionIndex].choices;
   for (let i = 0; i < answerChoices.length; i++) {
     let choiceContainer = document.createElement("div");
 
@@ -141,7 +139,7 @@ function showQuestion() {
 // Function to check the selected answer and provide feedback
 function checkAnswer() {
   let selectedAnswer;
-  let correctAnswer = questions[randomIndex].answer;
+  let correctAnswer = questions[currentQuestionIndex].answer;
   let allAnswers = document.getElementsByName("choices");
   for (let i = 0; i < allAnswers.length; i++) {
     if (allAnswers[i].checked) {
@@ -158,7 +156,7 @@ function checkAnswer() {
     incrementWrongAnswer();
   }
   endQuiz();
-  randomIndex++;
+  currentQuestionIndex++;
   showQuestion();
 }
 // increments correct answers
