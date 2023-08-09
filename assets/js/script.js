@@ -99,11 +99,8 @@ const questions = [
     answer: "2",
   },
 ];
-// Initialises randomIndex for question selection
-let randomIndex = 0;
-
-// Initialises empty array to store random questions
-let selectedQuestions = [];
+// Keeps track of current Question
+let currentQuestionIndex = 0;
 
 // Event listener to execute showQuestion function when the DOM is loaded
 document.addEventListener("DOMContentLoaded", showQuestion);
