@@ -118,23 +118,14 @@ function showQuestion() {
 
   let randomQuestions = [...questions];
 
-  // Shuffle the copy of the questions array
-  for (let i = randomQuestions.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * i);
-    [
-      randomQuestions[i],
-      randomQuestions[j]
-    ] = [
-      randomQuestions[j],
-      randomQuestions[i],
-    ];
-  }
 
   // Get the first 10 questions from the shuffled array
   selectedQuestions = randomQuestions.slice(0, 10);
 
   // Get a random index within the range of the selected questions
   randomIndex = Math.floor(Math.random() * selectedQuestions.length);
+
+  
 
   let questionText = document.createElement("p");
   questionText.textContent = selectedQuestions[randomIndex].question;
