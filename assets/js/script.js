@@ -102,11 +102,19 @@ const questions = [
 // keeps track of current question
 let currentQuestionIndex = 0;
 
-// Event listener to execute showQuestion function when the DOM is loaded
-document.addEventListener("DOMContentLoaded", showQuestion);
+// Gets each Button on the page and listens for which Diffuclty has been clicked by the user 
+let buttons = document.getElementsByClassName("difficultyButtons")
+for (let button of buttons) {
+  button.addEventListener("click", function () {
+    if (this.id === "easyButton") {
+      console.log("hello")
+    }
+  } ) 
+}
+
 
 let submitButton = document.getElementById("submit");
-submitButton.addEventListener("click", checkAnswer);
+//submitButton.addEventListener("click", checkAnswer);
 
 // Function to display the current question and answer choices
 function showQuestion() {
