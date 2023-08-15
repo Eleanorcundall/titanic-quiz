@@ -1,4 +1,4 @@
-const questions = [
+const easyQuestions = [
   {
     question: "What was the Titanics official name?",
     choices: ["Royal Mail Ship", "Royal Marine Ship", "Racing Marine Steamer"],
@@ -99,28 +99,38 @@ const questions = [
     answer: "2",
   },
 ];
+
 // keeps track of current question
 let currentQuestionIndex = 0;
+let submitButton;
 
-// Gets each Button on the page and listens for which Diffuclty has been clicked by the user 
-let buttons = document.getElementsByClassName("difficultyButtons")
-for (let button of buttons) {
-  button.addEventListener("click", function () {
-    if (this.id === "easyButton") {
-      console.log("hello")
-    }
-  } ) 
-}
+// Call this function when the page loads to set up the event listener
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("Document loaded");
+  // Gets each Button on the page and listens for which Difficulty has been clicked by the user
+  let buttons = document.getElementsByClassName("difficultyButtons");
+  for (let button of buttons) {
+    button.addEventListener("click", function () {
+      console.log("Difficulty button clicked");
+      if (this.id === "easyButton") {
+        console.log("Easy difficulty selected");
+        showQuestion(easyQuestions);
+      }
+    });
+  }
 
-
-let submitButton = document.getElementById("submit");
-//submitButton.addEventListener("click", checkAnswer);
+  submitButton = document.createElement("button");
+  submitButton.textContent = "Submit";
+  submitButton.addEventListener("click", function () {
+    checkAnswer(easyQuestions);
+  });
+});
 
 // Function to display the current question and answer choices
-function showQuestion() {
-  let questionContainer = document.getElementById("displayQuestions");
+function showQuestion(questions) {
+  console.log("in showQuestions()");
+  let questionContainer = document.createElement("div");
   questionContainer.innerHTML = ""; // Clear existing question
-
 
   let questionText = document.createElement("p");
   questionText.textContent = questions[currentQuestionIndex].question;
@@ -141,20 +151,29 @@ function showQuestion() {
 
     choiceContainer.appendChild(choiceInput);
     questionContainer.appendChild(choiceContainer);
+
+    choiceContainer.appendChild(choiceInput);
+    questionContainer.appendChild(choiceContainer);
+    document.getElementById("quizArea").appendChild(questionContainer);
+    questionContainer.appendChild(submitButton);
   }
 }
 
 // Function to check the selected answer and provide feedback
-function checkAnswer() {
+function checkAnswer(questions) {
   let selectedAnswer;
   let correctAnswer = questions[currentQuestionIndex].answer;
   let allAnswers = document.getElementsByName("choices");
+
   for (let i = 0; i < allAnswers.length; i++) {
     if (allAnswers[i].checked) {
       selectedAnswer = i.toString();
       break;
     }
   }
+
+  console.log(`correctAnswer: ${correctAnswer}`);
+  console.log(`selectedAnswer: ${selectedAnswer}`);
 
   if (correctAnswer === selectedAnswer) {
     alert("You got the answer correct!");
@@ -164,9 +183,12 @@ function checkAnswer() {
     incrementWrongAnswer();
   }
   endQuiz();
+
   currentQuestionIndex++;
+
   showQuestion();
 }
+
 // increments correct answers
 function incrementScore() {
   let oldScore = parseInt(document.getElementById("correctAnswers").innerText);
