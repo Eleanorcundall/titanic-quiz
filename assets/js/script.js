@@ -114,11 +114,11 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Difficulty button clicked");
       if (this.id === "easyButton") {
         console.log("Easy difficulty selected");
-        showQuestion(easyQuestions);
+        showQuestion(easyQuestions, currentQuestionIndex);
       }
     });
   }
-
+  // Creates Submit button and adds event listener
   submitButton = document.createElement("button");
   submitButton.textContent = "Submit";
   submitButton.addEventListener("click", function () {
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Function to display the current question and answer choices
-function showQuestion(questions) {
+function showQuestion(questions, currentQuestionIndex) {
   console.log("in showQuestions()");
   let questionContainer = document.createElement("div");
   questionContainer.innerHTML = ""; // Clear existing question
@@ -151,12 +151,9 @@ function showQuestion(questions) {
 
     choiceContainer.appendChild(choiceInput);
     questionContainer.appendChild(choiceContainer);
-
-    choiceContainer.appendChild(choiceInput);
-    questionContainer.appendChild(choiceContainer);
-    document.getElementById("quizArea").appendChild(questionContainer);
-    questionContainer.appendChild(submitButton);
   }
+  questionContainer.appendChild(submitButton);
+  document.getElementById("quizArea").appendChild(questionContainer);
 }
 
 // Function to check the selected answer and provide feedback
@@ -170,23 +167,25 @@ function checkAnswer(questions) {
       selectedAnswer = i.toString();
       break;
     }
-  }
+  }-
 
   console.log(`correctAnswer: ${correctAnswer}`);
   console.log(`selectedAnswer: ${selectedAnswer}`);
 
   if (correctAnswer === selectedAnswer) {
     alert("You got the answer correct!");
-    incrementScore();
+    // incrementScore();
   } else {
     alert(`Oh no, you got it wrong!!`);
-    incrementWrongAnswer();
+    // incrementWrongAnswer();
   }
-  endQuiz();
 
-  currentQuestionIndex++;
-
-  showQuestion();
+  if (currentQuestionIndex < questions.length - 1) {
+    currentQuestionIndex++;
+    showQuestion(questions, currentQuestionIndex);
+  } else {
+    endQuiz();
+  }
 }
 
 // increments correct answers
@@ -211,19 +210,18 @@ function endQuiz() {
     document.getElementById("incorrectAnswers").innerText
   );
 
-  if (correctAnswers + incorrectAnswers >= 15) {
-    let quizResults = document.createElement("p");
-    quizResults.innerHTML = `Well done! you got ${correctAnswers} out of 15!!`;
-    let resultContainer = document.createElement("div");
-    resultContainer.appendChild(quizResults);
-    let targetElement = document.getElementById("quizArea");
-    removeAllChildren(targetElement);
+  let quizResults = document.createElement("p");
+  quizResults.innerHTML = `Well done! you got ${correctAnswers} out of 15!!`;
+  let resultContainer = document.createElement("div");
+  resultContainer.appendChild(quizResults);
+  let targetElement = document.getElementById("quizArea");
+  removeAllChildren(targetElement);
 
-    document.body.appendChild(resultContainer);
-  }
-  function removeAllChildren(element) {
-    while (element.firstChild) {
-      element.removeChild(element.firstChild);
-    }
+  document.body.appendChild(resultContainer);
+}
+
+function removeAllChildren(element) {
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
   }
 }
