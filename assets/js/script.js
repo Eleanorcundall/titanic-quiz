@@ -53,11 +53,11 @@ const easyQuestions = [
   {
     question: "How many people were aboard the Titanic when it sunk?",
     choices: ["About 500", "About 1000", "About 2200"],
-    answer: "2",
+    answer: "1",
   },
   {
-    question: "How many dogs were aboard the Titanic?",
-    choices: ["3", "12", "6"],
+    question: "Where did the Titanic leave from on the voyage?",
+    choices: ["Liverpool", "Southampton", "Dover"],
     answer: "1",
   },
   {
@@ -67,6 +67,91 @@ const easyQuestions = [
       "14 – 15 April, 1912 ",
       "24 – 25 December, 1972 ",
     ],
+    answer: "1",
+  },
+  {
+    question: "The RMS Titanic was operated by whom?",
+    choices: ["The White Star Line", "Cunard Line", "P&O Cruises"],
+    answer: "0",
+  },
+  {
+    question: "How many survivors did she bring aboard?",
+    choices: ["Around 705", "Around 40", "Around 1500"],
+    answer: "0",
+  },
+  {
+    question:
+      "What was the name of the ship that came to the Titanic’s rescue?",
+    choices: ["RMS Empress of China", "RMS Empress of India ", "RMS Carpathia"],
+    answer: "2",
+  },
+  {
+    question:
+      " At least how many people lost their lives when the Titanic sunk",
+    choices: ["At least 100 ", "At least 500", "At least 1,500"],
+    answer: "2",
+  },
+  {
+    question: "How many Voyages had the Titanic previously been on",
+    choices: ["2", "6", "0, it was her Maiden Voyage"],
+    answer: "2",
+  },
+];
+
+let mediumQuestions = [
+  {
+    question: "What time did the Titanic hit the iceberg?",
+    choices: ["10:00 pm", "2:20 am", "11:40 pm"],
+    answer: "2", // The index of the correct answer choice
+  },
+  {
+    question: "How long did it take to build the Titanic? ",
+    choices: ["3 Years", "8 Years", "18 Months"],
+    answer: "0",
+  },
+  {
+    question: "When was the wreck of the Titanic discovered?",
+    choices: ["1913", "1956", "1985"],
+    answer: "2",
+  },
+  {
+    question: "In which city was the Titanic registered?",
+    choices: ["London, UK", "New York City, United States ", "Liverpool, UK"],
+    answer: "2",
+  },
+  {
+    question:
+      "How long did it take between the moment the Titanic hit the iceberg and the moment it sank?",
+    choices: ["15 Minutes", "2 Hours 40 Minues", "1 hour 15 Minutes"],
+    answer: "1",
+  },
+  {
+    question: "How long was the Titanic?",
+    choices: ["882 feet 9 inches", "1045 feet 6 inches", "452 feet 4 inches"],
+    answer: "0",
+  },
+  {
+    question: "Who was the Titanics Designer?",
+    choices: ["Thomas Andrews", "Bruce Ismay", "Edward John Smith"],
+    answer: "0",
+  },
+  {
+    question: "How did the Titanic Hit the Iceberg",
+    choices: [
+      "Head on collison",
+      "On the Left, Port side",
+      "On the Right, starboard side",
+    ],
+    answer: "2",
+  },
+  {
+    question: "How many dogs were aboard the Titanic?",
+    choices: ["3", "12", "6"],
+    answer: "1",
+  },
+  {
+    question: "How many water tight compartments did the Titnaic have?",
+    choices: ["8", "16", "25"],
     answer: "1",
   },
   {
@@ -83,14 +168,13 @@ const easyQuestions = [
   },
   {
     question:
-      "What was the name of the ship that came to the Titanic’s rescue?",
-    choices: ["RMS Empress of China", "RMS Empress of India ", "RMS Carpathia"],
+      "How many of Titanic water tight compartments were breached in the collison?",
+    choices: ["3", "4", "6"],
     answer: "2",
   },
   {
-    question:
-      " At least how many people lost their lives when the Titanic sunk",
-    choices: ["At least 100 ", "At least 500", "At least 1,500"],
+    question: "How many movies about the Titanic have been filmed?",
+    choices: ["2", "1", "16"],
     answer: "2",
   },
   {
@@ -100,9 +184,9 @@ const easyQuestions = [
   },
 ];
 
-// keeps track of current question
-let currentQuestionIndex = 0;
-let submitButton;
+// Variables Created For the Global Scop
+let currentQuestionIndex = 0; // keeps track of current question
+let submitButton; // Makes Sure SubmitButton is Global
 
 // Call this function when the page loads to set up the event listener
 document.addEventListener("DOMContentLoaded", function () {
@@ -115,6 +199,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (this.id === "easyButton") {
         console.log("Easy difficulty selected");
         showQuestion(easyQuestions, currentQuestionIndex);
+      } else if (this.id === "mediumButton") {
+        console.log("Medium difficulty selected");
+        showQuestion(mediumQuestions, currentQuestionIndex);
       }
     });
   }
@@ -209,7 +296,17 @@ function endQuiz() {
   );
 
   let quizResults = document.createElement("p");
-  quizResults.innerHTML = `Well done! you got ${correctAnswers} out of 15!!`;
+  if (correctAnswers < 5) {
+    quizResults.innerHTML = `Hmm.. You Got ${correctAnswers} out of 15, you need more practice!!!`;
+  } else if (correctAnswers <= 10){
+    quizResults.innerHTML = `You Got ${correctAnswers} out of 15 not too bad... `;
+  } else if (correctAnswers <= 14) {
+    quizResults.innerHTML = `Well Done!!! You Got ${correctAnswers} out of 15... `;
+  } else if (correctAnswers === 15) {
+    quizResults.innerHTML = `WOW!!! You Got ${correctAnswers} out of 15... Full Marks! `;
+  } else {
+    console.log("UNKNOWN SCORE")
+  }
   let resultContainer = document.createElement("div");
   resultContainer.appendChild(quizResults);
   let targetElement = document.getElementById("quizArea");
