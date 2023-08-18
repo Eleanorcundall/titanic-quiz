@@ -75,8 +75,8 @@ const easyQuestions = [
     answer: "0",
   },
   {
-    question: "How many survivors did she bring aboard?",
-    choices: ["Around 705", "Around 40", "Around 1500"],
+    question: "How many survivors were there?",
+    choices: ["Around 700", "Around 40", "Around 1500"],
     answer: "0",
   },
   {
