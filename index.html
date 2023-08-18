@@ -9,23 +9,32 @@
   <body>
     <h1>Titanic Quiz</h1>
     <div id="quizArea">
-
       <h2>Select your Class...</h2>
-      
+
       <div id="selectLevel"></div>
 
-      <button id = "easyButton" class = "difficultyButtons">first class (Easy)</button>
-      <button id = "mediumButton" class = "difficultyButtons">Second Class (Medium)</button>
-      <button id = "hardButton" class = "difficultyButtons">Third Class (Hard)</button>
-
+      <button id="easyButton" class="difficultyButtons">
+        first class (Easy)
+      </button>
+      <button id="mediumButton" class="difficultyButtons">
+        Second Class (Medium)
+      </button>
+      <button id="hardButton" class="difficultyButtons">
+        Third Class (Hard)
+      </button>
     </div>
-    
+    <div id="questionArea">
+      <p id="questionText"></p>
+      <p class ="choiceText"></p>
+      <p class ="choiceText"></p>
+      <p class ="choiceText"></p>
+    </div>
+
     <div id="scoreArea">
-      
+      <p id="correctAnswers">0</p>
+      <p id="incorrectAnswers">0</p>
     </div>
 
-    
     <script src="assets/js/script.js"></script>
-
   </body>
 </html>

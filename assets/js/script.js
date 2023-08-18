@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Function to display the current question and answer choices
 function showQuestion(questions, currentQuestionIndex) {
   console.log("in showQuestions()");
-  let questionContainer = document.createElement("div");
+  let questionContainer = document.getElementById("questionArea");
   questionContainer.innerHTML = ""; // Clear existing question
 
   let questionText = document.createElement("p");
@@ -155,7 +155,6 @@ function showQuestion(questions, currentQuestionIndex) {
   questionContainer.appendChild(submitButton);
   document.getElementById("quizArea").appendChild(questionContainer);
 }
-
 // Function to check the selected answer and provide feedback
 function checkAnswer(questions) {
   let selectedAnswer;
@@ -167,17 +166,16 @@ function checkAnswer(questions) {
       selectedAnswer = i.toString();
       break;
     }
-  }-
-
+  }
   console.log(`correctAnswer: ${correctAnswer}`);
   console.log(`selectedAnswer: ${selectedAnswer}`);
 
   if (correctAnswer === selectedAnswer) {
     alert("You got the answer correct!");
-    // incrementScore();
+    incrementScore();
   } else {
     alert(`Oh no, you got it wrong!!`);
-    // incrementWrongAnswer();
+    incrementWrongAnswer();
   }
 
   if (currentQuestionIndex < questions.length - 1) {
