@@ -209,13 +209,14 @@ document.addEventListener("DOMContentLoaded", function () {
   submitButton = document.createElement("button");
   submitButton.textContent = "Submit";
   submitButton.addEventListener("click", function () {
-    checkAnswer(easyQuestions);
+    checkAnswer(mediumQuestions);
   });
 });
 
 // Function to display the current question and answer choices
 function showQuestion(questions, currentQuestionIndex) {
   console.log("in showQuestions()");
+  document.getElementById("selectLevel").style.display = 'none';
   let questionContainer = document.getElementById("questionArea");
   questionContainer.innerHTML = ""; // Clear existing question
 
