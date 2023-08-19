@@ -196,6 +196,7 @@ const questions = {
 // Variables Created For the Global Scop
 let currentQuestionIndex = 0; // keeps track of current question
 let submitButton; // Makes Sure SubmitButton is Global
+let difficultySelected = "easyQuestions" // Defaults to easy questions
 
 // Call this function when the page loads to set up the event listener
 document.addEventListener("DOMContentLoaded", function () {
@@ -208,18 +209,26 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Difficulty button clicked");
       if (this.id === "easyButton") {
         console.log("Easy difficulty selected");
+        difficultySelected = "easyQuestions"
+        console.log(difficultySelected)
         showQuestion(questions.easyQuestions, currentQuestionIndex);
       } else if (this.id === "mediumButton") {
-        console.log("Medium difficulty selected");
+        console.log("Medium difficulty selected")
+        difficultySelected = "mediumQuestions";
         showQuestion(questions.mediumQuestions, currentQuestionIndex);
       }
     });
   }
+
+
   // Creates Submit button and adds event listener
   submitButton = document.createElement("button");
   submitButton.textContent = "Submit";
+  
   submitButton.addEventListener("click", function () {
-    checkAnswer(questions.easyQuestions);
+    console.log("about to check");
+    checkAnswer();
+    console.log("checked")
   });
 });
 
@@ -228,6 +237,7 @@ function showQuestion(questions, currentQuestionIndex) {
   console.log("in showQuestions()");
   document.getElementById("selectLevel").style.display = "none";
   document.getElementById("scoreArea").style.display = "block";
+  document.getElementById("selectClassHeading").style.display = "none";
   let questionContainer = document.getElementById("questionArea");
   questionContainer.innerHTML = ""; // Clear existing question
 
@@ -255,9 +265,10 @@ function showQuestion(questions, currentQuestionIndex) {
   document.getElementById("quizArea").appendChild(questionContainer);
 }
 // Function to check the selected answer and provide feedback
-function checkAnswer(questions) {
+function checkAnswer() {
+  let currentQuestions = questions[difficultySelected]
   let selectedAnswer;
-  let correctAnswer = questions[currentQuestionIndex].answer;
+  let correctAnswer = currentQuestions[currentQuestionIndex].answer;
   let allAnswers = document.getElementsByName("choices");
 
   for (let i = 0; i < allAnswers.length; i++) {
@@ -277,9 +288,9 @@ function checkAnswer(questions) {
     incrementWrongAnswer();
   }
 
-  if (currentQuestionIndex < questions.length - 1) {
+  if (currentQuestionIndex < currentQuestions.length - 1) {
     currentQuestionIndex++;
-    showQuestion(questions, currentQuestionIndex);
+    showQuestion(currentQuestions, currentQuestionIndex);
   } else {
     endQuiz();
   }
@@ -321,10 +332,18 @@ function endQuiz() {
   }
   let resultContainer = document.createElement("div");
   resultContainer.appendChild(quizResults);
+  let playAgainButton = document.createElement("button")
+  playAgainButton.innerHTML = "Play Again?"
+  
+  resultContainer.appendChild(playAgainButton)
   let targetElement = document.getElementById("quizArea");
   removeAllChildren(targetElement);
 
   document.body.appendChild(resultContainer);
+
+  playAgainButton.addEventListener("click", () => {
+    window.location.reload();
+  })
 }
 
 function removeAllChildren(element) {
@@ -332,3 +351,5 @@ function removeAllChildren(element) {
     element.removeChild(element.firstChild);
   }
 }
+
+
