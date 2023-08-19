@@ -31,3 +31,11 @@ body{
 #submit:hover{
 	background-color: #3a8;
 }
+
+#correctAnswers {
+	color: #297;
+	
+}
+#incorrectAnswers {
+	color: red;
+}

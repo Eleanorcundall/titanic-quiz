@@ -191,6 +191,7 @@ let submitButton; // Makes Sure SubmitButton is Global
 // Call this function when the page loads to set up the event listener
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Document loaded");
+  document.getElementById("scoreArea").style.display = 'none'
   // Gets each Button on the page and listens for which Difficulty has been clicked by the user
   let buttons = document.getElementsByClassName("difficultyButtons");
   for (let button of buttons) {
@@ -217,6 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function showQuestion(questions, currentQuestionIndex) {
   console.log("in showQuestions()");
   document.getElementById("selectLevel").style.display = 'none';
+  document.getElementById("scoreArea").style.display = "block";
   let questionContainer = document.getElementById("questionArea");
   questionContainer.innerHTML = ""; // Clear existing question
 
