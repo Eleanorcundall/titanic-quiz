@@ -33,9 +33,9 @@ body{
 }
 
 #correctAnswers {
-	color: #297;
-	
+	color: green;
 }
+
 #incorrectAnswers {
 	color: red;
 }

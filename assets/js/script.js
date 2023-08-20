@@ -191,6 +191,91 @@ const questions = {
       answer: "2",
     },
   ],
+  hardQuestions: [
+    {
+      question: "What time did the Titanic hit the iceberg?",
+      choices: ["10:00 pm", "2:20 am", "11:40 pm"],
+      answer: "2", // The index of the correct answer choice
+    },
+    {
+      question: "How long did it take to build the Titanic? ",
+      choices: ["3 Years", "8 Years", "18 Months"],
+      answer: "0",
+    },
+    {
+      question: "When was the wreck of the Titanic discovered?",
+      choices: ["1913", "1956", "1985"],
+      answer: "2",
+    },
+    {
+      question: "In which city was the Titanic registered?",
+      choices: ["London, UK", "New York City, United States ", "Liverpool, UK"],
+      answer: "2",
+    },
+    {
+      question:
+        "How long did it take between the moment the Titanic hit the iceberg and the moment it sank?",
+      choices: ["15 Minutes", "2 Hours 40 Minues", "1 hour 15 Minutes"],
+      answer: "1",
+    },
+    {
+      question: "How long was the Titanic?",
+      choices: ["882 feet 9 inches", "1045 feet 6 inches", "452 feet 4 inches"],
+      answer: "0",
+    },
+    {
+      question: "Who was the Titanics Designer?",
+      choices: ["Thomas Andrews", "Bruce Ismay", "Edward John Smith"],
+      answer: "0",
+    },
+    {
+      question: "How did the Titanic Hit the Iceberg",
+      choices: [
+        "Head on collison",
+        "On the Left, Port side",
+        "On the Right, starboard side",
+      ],
+      answer: "2",
+    },
+    {
+      question: "How many dogs were aboard the Titanic?",
+      choices: ["3", "12", "6"],
+      answer: "1",
+    },
+    {
+      question: "How many water tight compartments did the Titnaic have?",
+      choices: ["8", "16", "25"],
+      answer: "1",
+    },
+    {
+      question:
+        "The Titanic was equipped to hold 64 lifeboats, but how many did it actually have?",
+      choices: ["20", "65", "63"],
+      answer: "0",
+    },
+    {
+      question:
+        "Each lifeboat could hold 40 to 65 people (depending on what style it was). How many people were aboard the first lifeboat? ",
+      choices: ["28", "40", "65"],
+      answer: "0",
+    },
+    {
+      question:
+        "How many of Titanic water tight compartments were breached in the collison?",
+      choices: ["3", "4", "6"],
+      answer: "2",
+    },
+    {
+      question: "How many movies about the Titanic have been filmed?",
+      choices: ["2", "1", "16"],
+      answer: "2",
+    },
+    {
+      question: "How many dogs survived the sinking?",
+      choices: ["3", "6", "12"],
+      answer: "2",
+    },
+  ],
 };
 
 // Variables Created For the Global Scop
@@ -209,12 +294,16 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Difficulty button clicked");
       if (this.id === "easyButton") {
         console.log("Easy difficulty selected");
-        difficultySelected = "easyQuestions"
-        console.log(difficultySelected)
+        difficultySelected = "easyQuestions";
+        console.log(difficultySelected);
         showQuestion(questions.easyQuestions, currentQuestionIndex);
       } else if (this.id === "mediumButton") {
-        console.log("Medium difficulty selected")
+        console.log("Medium difficulty selected");
         difficultySelected = "mediumQuestions";
+        showQuestion(questions.mediumQuestions, currentQuestionIndex);
+      } else if (this.id === "hardButton") {
+        console.log("Hard difficulty selected");
+        difficultySelected = "hardQuestions";
         showQuestion(questions.mediumQuestions, currentQuestionIndex);
       }
     });
@@ -282,6 +371,7 @@ function checkAnswer() {
 
   if (correctAnswer === selectedAnswer) {
     alert("You got the answer correct!");
+    allAnswers[correctAnswer].parentNode.classList.add("correct-answer");
     incrementScore();
   } else {
     alert(`Oh no, you got it wrong!!`);
