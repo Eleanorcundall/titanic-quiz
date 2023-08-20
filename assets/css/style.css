@@ -1,41 +1,44 @@
 body{
 	font-size: 20px;
 	font-family: sans-serif;
-	
 	color: whitesmoke;
 	background-image: url(../images/titanic-bg.jpg);
 	background-repeat: no-repeat; 
 	background-size: cover;
-	height: 100%;
-	
-	
-
 }
-.question{
-	font-weight: 600;
-}
-.answers {
-    margin-bottom: 20px;
-}
-#submit{
-	font-family: sans-serif;
-	font-size: 20px;
-	background-color: #297;
-	color: white;
-	border: 0px;
-	border-radius: 3px;
-	padding: 20px;
-	cursor: pointer;
-	margin-bottom: 20px;
-}
-#submit:hover{
-	background-color: #3a8;
-}
-
+/* For the tally of correct/ incorrect answers throughout Quiz*/
 #correctAnswers {
 	color: green;
 }
 
 #incorrectAnswers {
 	color: red;
+}
+
+h1{
+	font-family: 'Great Vibes', 'raleway';
+	letter-spacing: 5px;
+	text-align: center;
+	font-size: 70px;
+}
+
+#selectLevel {
+	background-color:  #000028;
+	opacity: 70%;
+	text-align: center;
+	height: 250px;
+	margin: 50px;
+	border-radius: 20px;
+	font-family: 'Great Vibes', 'raleway';
+	letter-spacing: 3px;
+}
+
+.difficultyButtons {
+    cursor: pointer;
+	font-family: 'great vibes';
+	width: 20%;
+	height: 40%;
+	font-size: 40px;
+	border-radius: 10px;
+	background-image: url(../images/buttons-bg.webp);
 }

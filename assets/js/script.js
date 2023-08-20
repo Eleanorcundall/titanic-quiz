@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (this.id === "hardButton") {
         console.log("Hard difficulty selected");
         difficultySelected = "hardQuestions";
-        showQuestion(questions.mediumQuestions, currentQuestionIndex);
+        showQuestion(questions.hardQuestions, currentQuestionIndex);
       }
     });
   }
@@ -371,7 +371,7 @@ function checkAnswer() {
 
   if (correctAnswer === selectedAnswer) {
     alert("You got the answer correct!");
-    allAnswers[correctAnswer].parentNode.classList.add("correct-answer");
+    console.log(correctAnswer)
     incrementScore();
   } else {
     alert(`Oh no, you got it wrong!!`);
