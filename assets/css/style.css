@@ -24,24 +24,28 @@ h2 {
 	font-size: 50px;
 }
 #selectLevel {
-	background-color:  #000028;
-	opacity: 70%;
 	text-align: center;
+	margin: 0 auto;
+	background-color: #000028;
+	opacity: 70%;
 	height: 300px;
-	margin: 50px;
+	width: 1000px;
 	border-radius: 20px;
 	font-family: 'Great Vibes', 'raleway';
 	letter-spacing: 3px;
-}
+	font-size: 30px;
+}	
 
 .difficultyButtons {
     cursor: pointer;
 	font-family: 'great vibes';
 	width: 20%;
 	height: 40%;
-	font-size: 40px;
+	font-size: 35px;
 	border-radius: 10px;
 	background-image: url(../images/buttons-bg.webp);
+	margin: 25px;
+	
 }
 
 .questionStyling {
@@ -65,11 +69,34 @@ h2 {
 
 .submitButtonStyling {
     cursor: pointer;
-	font-family: 'great vibes';
-	width: 20%;
+	font-family: 'Courier New', Courier, monospace;
+	width: 10%;
 	height: 10%;
-	font-size: 40px;
+	font-size: 20px;
 	border-radius: 10px;
-	background-image: url(../images/buttons-bg.webp);
+	background-color: #000026;
+	color: white;
+	border: none;
+
 }
 
+.submitButtonStyling:hover {
+text-decoration: underline;
+}
+
+#easyButton {
+	border-color: #d4af37;
+	border-width: 6px;
+	padding: 6px;
+}
+#mediumButton {
+	border-color: silver;
+	border-width: 6px;
+	padding: 6px;
+
+}
+#hardButton {
+	border-color:  #cd7f32;
+	border-width: 6px;
+	padding: 6px;
+}
