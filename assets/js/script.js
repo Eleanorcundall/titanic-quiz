@@ -424,12 +424,16 @@ function endQuiz() {
   } else {
     console.log("UNKNOWN SCORE");
   }
+
+  
   let resultContainer = document.createElement("div");
   resultContainer.appendChild(quizResults);
+  resultContainer.classList.add("quizResultsStyling");
   let playAgainButton = document.createElement("button")
   playAgainButton.innerHTML = "Play Again?"
   
   resultContainer.appendChild(playAgainButton)
+  playAgainButton.classList.add("playAgainStyling")
   let targetElement = document.getElementById("quizArea");
   removeAllChildren(targetElement);
 

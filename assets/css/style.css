@@ -27,12 +27,12 @@ h2 {
 	text-align: center;
 	margin: 0 auto;
 	background-color: #000028;
-	opacity: 70%;
+	opacity: 80%;
 	height: 300px;
 	width: 1000px;
 	border-radius: 20px;
 	font-family: 'Great Vibes', 'raleway';
-	letter-spacing: 3px;
+	letter-spacing: 5px;
 	font-size: 30px;
 }	
 
@@ -47,13 +47,16 @@ h2 {
 	margin: 25px;
 	
 }
+.difficultyButtons:hover {
+	border-color: antiquewhite;
+}
 
 .questionStyling {
 	text-align: center;
 	margin: 0 auto;
 	background-color:  #000028;
-	opacity: 70%;
-	height: 500px;
+	opacity: 80%;
+	height: 450px;
 	width: 1000px;
 	border-radius: 20px;
 	font-family: 'Courier New', Courier, monospace;
@@ -80,14 +83,13 @@ h2 {
 
 }
 
-.submitButtonStyling:hover {
-text-decoration: underline;
-}
-
 #easyButton {
 	border-color: #d4af37;
 	border-width: 6px;
 	padding: 6px;
+}
+#easyButton:hover {
+	border-color: red;
 }
 #mediumButton {
 	border-color: silver;
@@ -95,8 +97,46 @@ text-decoration: underline;
 	padding: 6px;
 
 }
+#mediumButton:hover {
+	border-color: red;
+}
 #hardButton {
 	border-color:  #cd7f32;
 	border-width: 6px;
 	padding: 6px;
+}
+#hardButton:hover {
+	border-color: red;
+}
+
+.playAgainStyling {
+    cursor: pointer;
+	font-family: 'Courier New', Courier, monospace;
+	width: 10%;
+	height: 10%;
+	font-size: 30px;
+	border-radius: 10px;
+	background-color: #000026;
+	color: white;
+	border: none;
+	text-align: center;
+	margin-top: 100px;
+}
+
+.playAgainStyling:hover {
+	text-decoration: underline;
+}
+
+.quizResultsStyling {
+	padding: 50px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #000028;
+	opacity: 80%;
+	height: 300px;
+	width: 1000px;
+	border-radius: 20px;
+	font-family: 'Courier New', Courier, monospace;
+	letter-spacing: 0px;
+	font-size: 27px;
 }
