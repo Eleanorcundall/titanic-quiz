@@ -312,8 +312,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Creates Submit button and adds event listener
   submitButton = document.createElement("button");
-  submitButton.textContent = "Submit";
   
+  submitButton.textContent = "Submit";
+  submitButton.classList.add("submitButtonStyling")
   submitButton.addEventListener("click", function () {
     console.log("about to check");
     checkAnswer();
@@ -349,9 +350,12 @@ function showQuestion(questions, currentQuestionIndex) {
 
     choiceContainer.appendChild(choiceInput);
     questionContainer.appendChild(choiceContainer);
+    questionContainer.classList.add("questionStyling")
+    choiceText.classList.add("questionTextStyling");
   }
   questionContainer.appendChild(submitButton);
   document.getElementById("quizArea").appendChild(questionContainer);
+
 }
 // Function to check the selected answer and provide feedback
 function checkAnswer() {
