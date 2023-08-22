@@ -7,8 +7,13 @@ body{
 /* For the tally of correct/ incorrect answers throughout Quiz*/
 #correctAnswers {
 	color: green;
+	
 }
-
+#scoreArea  {
+	text-align: center;
+	font-family: 'Courier New', Courier, monospace;
+	
+}
 #incorrectAnswers {
 	color: red;
 }
@@ -79,10 +84,15 @@ h2 {
 	border-radius: 10px;
 	background-color: #000026;
 	color: white;
-	border: none;
+	border-color: white;
 
 }
-
+.submitButtonStyling:hover {
+	text-decoration: underline;
+}
+.inputStyling {
+	transform: scale(1.5)
+}
 #easyButton {
 	border-color: #d4af37;
 	border-width: 6px;
@@ -112,15 +122,15 @@ h2 {
 .playAgainStyling {
     cursor: pointer;
 	font-family: 'Courier New', Courier, monospace;
-	width: 10%;
-	height: 10%;
+	width: 20%;
+	height: 30%;
 	font-size: 30px;
 	border-radius: 10px;
 	background-color: #000026;
 	color: white;
-	border: none;
+	border-color: white;
 	text-align: center;
-	margin-top: 100px;
+	margin-top: 60px;
 }
 
 .playAgainStyling:hover {
@@ -132,7 +142,7 @@ h2 {
 	text-align: center;
 	margin: 0 auto;
 	background-color: #000028;
-	opacity: 80%;
+	opacity: 90%;
 	height: 300px;
 	width: 1000px;
 	border-radius: 20px;

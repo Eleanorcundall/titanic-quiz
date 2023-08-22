@@ -281,7 +281,7 @@ const questions = {
 // Variables Created For the Global Scop
 let currentQuestionIndex = 0; // keeps track of current question
 let submitButton; // Makes Sure SubmitButton is Global
-let difficultySelected = "easyQuestions" // Defaults to easy questions
+let difficultySelected = "easyQuestions"; // Defaults to easy questions
 
 // Call this function when the page loads to set up the event listener
 document.addEventListener("DOMContentLoaded", function () {
@@ -309,17 +309,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
   // Creates Submit button and adds event listener
   submitButton = document.createElement("button");
-  
   submitButton.textContent = "Submit";
-  submitButton.classList.add("submitButtonStyling")
+  submitButton.classList.add("submitButtonStyling");
   submitButton.addEventListener("click", function () {
     console.log("about to check");
     checkAnswer();
-    console.log("checked")
+    console.log("checked");
   });
+
 });
 
 // Function to display the current question and answer choices
@@ -330,6 +329,7 @@ function showQuestion(questions, currentQuestionIndex) {
   document.getElementById("selectClassHeading").style.display = "none";
   let questionContainer = document.getElementById("questionArea");
   questionContainer.innerHTML = ""; // Clear existing question
+  
 
   let questionText = document.createElement("p");
   questionText.textContent = questions[currentQuestionIndex].question;
@@ -342,24 +342,26 @@ function showQuestion(questions, currentQuestionIndex) {
     let choiceText = document.createElement("p");
     choiceText.textContent = answerChoices[i];
     choiceContainer.appendChild(choiceText);
+    
 
     let choiceInput = document.createElement("input");
     choiceInput.type = "radio";
     choiceInput.name = "choices";
     choiceInput.value = i;
 
+    choiceInput.classList.add("inputStyling")
     choiceContainer.appendChild(choiceInput);
     questionContainer.appendChild(choiceContainer);
-    questionContainer.classList.add("questionStyling")
+    questionContainer.classList.add("questionStyling");
     choiceText.classList.add("questionTextStyling");
+    
   }
   questionContainer.appendChild(submitButton);
   document.getElementById("quizArea").appendChild(questionContainer);
-
 }
 // Function to check the selected answer and provide feedback
 function checkAnswer() {
-  let currentQuestions = questions[difficultySelected]
+  let currentQuestions = questions[difficultySelected];
   let selectedAnswer;
   let correctAnswer = currentQuestions[currentQuestionIndex].answer;
   let allAnswers = document.getElementsByName("choices");
@@ -375,7 +377,7 @@ function checkAnswer() {
 
   if (correctAnswer === selectedAnswer) {
     alert("You got the answer correct!");
-    console.log(correctAnswer)
+    console.log(correctAnswer);
     incrementScore();
   } else {
     alert(`Oh no, you got it wrong!!`);
@@ -425,15 +427,14 @@ function endQuiz() {
     console.log("UNKNOWN SCORE");
   }
 
-  
   let resultContainer = document.createElement("div");
   resultContainer.appendChild(quizResults);
   resultContainer.classList.add("quizResultsStyling");
-  let playAgainButton = document.createElement("button")
-  playAgainButton.innerHTML = "Play Again?"
-  
-  resultContainer.appendChild(playAgainButton)
-  playAgainButton.classList.add("playAgainStyling")
+  let playAgainButton = document.createElement("button");
+  playAgainButton.innerHTML = "Play Again?";
+
+  resultContainer.appendChild(playAgainButton);
+  playAgainButton.classList.add("playAgainStyling");
   let targetElement = document.getElementById("quizArea");
   removeAllChildren(targetElement);
 
@@ -441,7 +442,7 @@ function endQuiz() {
 
   playAgainButton.addEventListener("click", () => {
     window.location.reload();
-  })
+  });
 }
 
 function removeAllChildren(element) {
@@ -449,5 +450,4 @@ function removeAllChildren(element) {
     element.removeChild(element.firstChild);
   }
 }
-
 
