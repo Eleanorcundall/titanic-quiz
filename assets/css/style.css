@@ -150,3 +150,60 @@ h2 {
 	letter-spacing: 0px;
 	font-size: 27px;
 }
+
+@media only screen and (max-width: 575px) {
+body{
+	color: white;
+	background-image: url(../images/titanic-bg-smaller-screens.jpg);
+	background-size: cover;
+	height: fit-content;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+#selectLevel {
+	width: fit-content;
+	height: fit-content;
+}
+
+.difficultyButtons {
+text-align: center;
+width: 70%;
+height: 100px;
+}
+
+.questionStyling {
+	text-align: center;
+	width: 90%;
+	height: fit-content;
+	font-size: 20px;
+}
+
+.questionTextStyling {
+	font-size: 18px;
+	margin-top: 60px;
+}
+
+.submitButtonStyling {
+	width: fit-content;
+	margin: 30px;
+}
+.quizResultsStyling {
+	margin-top: 50px;
+	text-align: center;
+	width: 70%;
+	height: 200px;
+	font-size: 25px;
+}
+
+.playAgainStyling {
+	font-size: 20px;
+	width: fit-content;
+}
+
+#correctAnswers, #incorrectAnswers {
+ display: block;
+}
+}
