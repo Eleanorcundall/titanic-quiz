@@ -3,6 +3,7 @@ body{
 	background-image: url(../images/titanic-bg.jpg);
 	background-repeat: no-repeat; 
 	background-size: cover;
+
 }
 /* For the tally of correct/ incorrect answers throughout Quiz*/
 #correctAnswers {
@@ -155,12 +156,15 @@ h2 {
 body{
 	color: white;
 	background-image: url(../images/titanic-bg-smaller-screens.jpg);
-	background-size: cover;
+	background-size: 600px;
 	height: fit-content;
 }
 
 h1 {
-	font-size: 40px;
+	font-size: 45px;
+}
+h2 {
+	font-size: 33px;
 }
 
 #selectLevel {
@@ -201,6 +205,7 @@ height: 100px;
 .playAgainStyling {
 	font-size: 20px;
 	width: fit-content;
+	margin: 5px;
 }
 
 #correctAnswers, #incorrectAnswers {
