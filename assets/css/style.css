@@ -2,7 +2,7 @@ body{
 	color: white;
 	background-image: url(../images/titanic-bg.jpg);
 	background-repeat: no-repeat; 
-	background-size: cover;
+	background-size:cover;
 
 }
 /* For the tally of correct/ incorrect answers throughout Quiz*/
@@ -152,12 +152,12 @@ h2 {
 	font-size: 27px;
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 1200px){
 body{
 	color: white;
 	background-image: url(../images/titanic-bg-smaller-screens.jpg);
-	background-size: 600px;
-	height: fit-content;
+	background-size: cover;
+	
 }
 
 h1 {
@@ -212,3 +212,4 @@ height: 100px;
  display: block;
 }
 }
+
