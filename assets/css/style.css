@@ -152,12 +152,12 @@ h2 {
 	font-size: 27px;
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 575px){
 body{
 	color: white;
-	background-image: url(../images/titanic-bg-smaller-screens.jpg);
+	background-image: url(../images/titanic-bg-575.jpg);
 	background-size: cover;
-	
+	height: 900px;
 }
 
 h1 {
@@ -211,5 +211,69 @@ height: 100px;
 #correctAnswers, #incorrectAnswers {
  display: block;
 }
+}
+@media only screen and (max-width: 1200px) and (min-width: 575px) {
+
+	body {
+		background-image: url(../images/titanic-bg-1200.jpg);
+	}
+
+	h1 {
+	font-size: 55px;
+}
+h2 {
+	font-size: 43px;
+}
+
+#selectLevel {
+	width: fit-content;
+	height: fit-content;
+}
+
+.difficultyButtons {
+text-align: center;
+width: 70%;
+height: 100px;
+}
+
+.questionStyling {
+	text-align: center;
+	width: 90%;
+	height: fit-content;
+	font-size: 25px;
+}
+
+.questionTextStyling {
+	font-size: 22px;
+	margin-top: 60px;
+}
+
+.submitButtonStyling {
+	width: fit-content;
+	margin: 30px;
+	font-size: 25px;
+}
+.quizResultsStyling {
+	margin-top: 50px;
+	text-align: center;
+	width: 70%;
+	height: 200px;
+	font-size: 25px;
+}
+
+.playAgainStyling {
+	font-size: 20px;
+	width: fit-content;
+	margin: 5px;
+}
+
+#correctAnswers, #incorrectAnswers {
+ display: block;
+}
+
+#scoreArea {
+	font-size: 20px;
+}
+
 }
 
