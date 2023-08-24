@@ -19,7 +19,7 @@ body{
 	color: red;
 }
 
-
+/* Main landing page CSS */
 h1, a {
 	font-family: 'Great Vibes', 'raleway';
 	letter-spacing: 5px;
@@ -134,6 +134,7 @@ h2 {
 	border-color: white;
 }
 
+/* Styles questions for main quiz */
 .questionStyling {
 	text-align: center;
 	margin: 0 auto;
@@ -153,6 +154,14 @@ h2 {
 	font-size: 20px;
 }
 
+.inputStyling {
+	transform: scale(1.5)
+}
+
+.choice-container {
+	display: flex;
+}
+
 .submitButtonStyling {
     cursor: pointer;
 	font-family: 'Courier New', Courier, monospace;
@@ -168,6 +177,8 @@ h2 {
 .submitButtonStyling:hover {
 	text-decoration: underline;
 }
+
+/* CSS to indicate if question selected by user is correct or incorrect */
 .correct {
 	background-color: green !important;
 	border-radius: 20px;
@@ -178,14 +189,20 @@ h2 {
 	border-radius: 20px;
 }
 
-.choice-container {
-	display: flex;
+/* Css for Styling quiz results and button to play again */
+.quizResultsStyling {
+	padding: 50px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #000028;
+	opacity: 90%;
+	height: 300px;
+	width: 1000px;
+	border-radius: 20px;
+	font-family: 'Courier New', Courier, monospace;
+	letter-spacing: 0px;
+	font-size: 27px;
 }
-
-.inputStyling {
-	transform: scale(1.5)
-}
-
 
 .playAgainStyling {
     cursor: pointer;
@@ -205,19 +222,7 @@ h2 {
 	text-decoration: underline;
 }
 
-.quizResultsStyling {
-	padding: 50px;
-	text-align: center;
-	margin: 0 auto;
-	background-color: #000028;
-	opacity: 90%;
-	height: 300px;
-	width: 1000px;
-	border-radius: 20px;
-	font-family: 'Courier New', Courier, monospace;
-	letter-spacing: 0px;
-	font-size: 27px;
-}
+/* For Mobile screens with a max-width of 575 pixels */
 
 @media only screen and (max-width: 575px){
 body{
@@ -279,6 +284,8 @@ height: 100px;
  display: block;
 }
 }
+
+/* For Mobile screens with a max-width of 1200 pixels and min-width of 575 pixels*/
 @media only screen and (max-width: 1200px) and (min-width: 575px) {
 
 	body {

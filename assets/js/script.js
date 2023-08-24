@@ -1,3 +1,4 @@
+// Main Question Variable that stores all Qustions difficulties
 const questions = {
   easyQuestions: [
     {
@@ -417,7 +418,7 @@ function checkAnswer() {
     .getElementsByName("choices")
     [selectedAnswerIndex].parentElement.classList.add(answerClass);
 
-  //Delays the question to control the time in showing the feedback colour
+  // Delays the question to control the time in showing the feedback colour
   setTimeout(() => {
     if (currentQuestionIndex < currentQuestions.length - 1) {
       currentQuestionIndex++;
@@ -445,6 +446,7 @@ function incrementWrongAnswer() {
   document.getElementById("incorrectAnswers").innerText = ++oldScore;
 }
 
+// Ends Quiz when all 15 questions have been answered
 function endQuiz() {
   let correctAnswers = parseInt(
     document.getElementById("correctAnswers").innerText
@@ -482,6 +484,7 @@ function endQuiz() {
   });
 }
 
+// Remove previous Elements to display final score
 function removeAllChildren(element) {
   while (element.firstChild) {
     element.removeChild(element.firstChild);
