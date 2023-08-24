@@ -410,9 +410,6 @@ function endQuiz() {
   let correctAnswers = parseInt(
     document.getElementById("correctAnswers").innerText
   );
-  let incorrectAnswers = parseInt(
-    document.getElementById("incorrectAnswers").innerText
-  );
 
   let quizResults = document.createElement("p");
   if (correctAnswers < 5) {
