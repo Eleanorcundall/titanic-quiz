@@ -294,6 +294,21 @@ let currentQuestionIndex = 0; // keeps track of current question
 let submitButton; // Makes Sure SubmitButton is Global
 let difficultySelected = "easyQuestions"; // Defaults to easy questions
 
+// Hides the rules untill user clicks 'how to play' button
+let howToPlayButton = document.getElementById("howToPlayButton");
+let howToPlayPopup = document.getElementById("howToPlayPopup");
+
+howToPlayButton.addEventListener("click", () => {
+  howToPlayPopup.style.display = "flex";
+});
+
+// Close the pop-up when the "Close" button is clicked
+const closePopupButton = document.getElementById("closePopup");
+
+closePopupButton.addEventListener("click", () => {
+  howToPlayPopup.style.display = "none";
+});
+
 // Call this function when the page loads to set up the event listener
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Document loaded");
