@@ -312,45 +312,49 @@ closePopupButton.addEventListener("click", () => {
 
 // Call this function when the page loads to set up the event listener
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("Document loaded");
+
   document.getElementById("scoreArea").style.display = "none";
   // Gets each Button on the page and listens for which Difficulty has been clicked by the user
   let buttons = document.getElementsByClassName("difficultyButtons");
   for (let button of buttons) {
     button.addEventListener("click", function () {
-      console.log("Difficulty button clicked");
+      
       if (this.id === "easyButton") {
-        console.log("Easy difficulty selected");
+        
         difficultySelected = "easyQuestions";
-        console.log(difficultySelected);
+        
         showQuestion(questions.easyQuestions, currentQuestionIndex);
       } else if (this.id === "mediumButton") {
-        console.log("Medium difficulty selected");
+      
         difficultySelected = "mediumQuestions";
         showQuestion(questions.mediumQuestions, currentQuestionIndex);
       } else if (this.id === "hardButton") {
-        console.log("Hard difficulty selected");
+      
         difficultySelected = "hardQuestions";
         showQuestion(questions.hardQuestions, currentQuestionIndex);
       }
     });
   }
 
-  // Creates Submit button and adds event listener
+  // Creates Submit button and adds event listener that only works if an option is checked
   submitButton = document.createElement("button");
   submitButton.textContent = "Submit";
   submitButton.classList.add("submitButtonStyling");
   submitButton.addEventListener("click", function () {
-    console.log("about to check");
-    checkAnswer();
-    console.log("checked");
-  });
 
+    let selectedInputs = document.querySelectorAll(
+      "input[type='radio']:checked"
+    );
+    if (selectedInputs.length === 0) {
+      alert("Please select an answer before submitting.");
+      return;
+    }
+    checkAnswer();
+  });
 });
 
 // Function to display the current question and answer choices
 function showQuestion(questions, currentQuestionIndex) {
-  console.log("in showQuestions()");
   document.getElementById("selectLevel").style.display = "none";
   document.getElementById("scoreArea").style.display = "block";
   document.getElementById("selectClassHeading").style.display = "none";
@@ -375,6 +379,7 @@ function showQuestion(questions, currentQuestionIndex) {
     choiceInput.type = "radio";
     choiceInput.name = "choices";
     choiceInput.value = i;
+
 
     choiceInput.classList.add("inputStyling")
     choiceContainer.appendChild(choiceInput);
@@ -402,12 +407,9 @@ function checkAnswer() {
       break;
     }
   }
-  console.log(`correctAnswer: ${correctAnswer}`);
-  console.log(`selectedAnswer: ${selectedAnswer}`);
 
   if (correctAnswer === selectedAnswer) {
     answerClass = "correct";
-    console.log(correctAnswer);
     incrementScore();
   } else {
     answerClass = "incorrect";
@@ -429,7 +431,7 @@ function checkAnswer() {
     document
       .getElementsByName("choices")
       [selectedAnswerIndex].parentElement.classList.remove(answerClass);
-  }, 1500);
+  }, 1000);
 }
 
 // increments correct answers
@@ -462,9 +464,8 @@ function endQuiz() {
     quizResults.innerHTML = `Well Done!!! You Got ${correctAnswers} out of 15... `;
   } else if (correctAnswers === 15) {
     quizResults.innerHTML = `WOW!!! You Got ${correctAnswers} out of 15... Full Marks! `;
-  } else {
-    console.log("UNKNOWN SCORE");
-  }
+  } 
+  
 
   let resultContainer = document.createElement("div");
   resultContainer.appendChild(quizResults);
