@@ -92,14 +92,14 @@ h2 {
 #howToPlayButton {
 	cursor: pointer;
 	font-family: 'Courier New', Courier, monospace;
-	width: 20%;
+	width: fit-content;
 	height: 50px;
 	font-size: 20px;
 	border-radius: 10px;
 	background-color: #000026;
 	color: white;
 	border-color: white;
-	display: block;
+	margin: 50px;
 }
 .popup {
   display: none;
@@ -111,10 +111,11 @@ h2 {
   background-color: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .popup-content {
-  background-color: white;
+  background-color: #000026;
   padding: 20px;
   border-radius: 10px;
   max-width: 80%;
@@ -122,7 +123,15 @@ h2 {
 }
 
 #closePopup {
-  margin-top: 10px;
+ 	cursor: pointer;
+	font-family: 'Courier New', Courier, monospace;
+	width: fit-content;
+	height: 50px;
+	font-size: 20px;
+	border-radius: 10px;
+	background-color: #000026;
+	color: white;
+	border-color: white;
 }
 
 .questionStyling {
