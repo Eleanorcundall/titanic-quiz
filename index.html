@@ -1,83 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Great+Vibes&family=Raleway:ital,wght@0,100;0,400;1,100&family=Tangerine&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <!-- Meta information -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Stylesheets and fonts -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Great+Vibes&family=Raleway:ital,wght@0,100;0,400;1,100&family=Tangerine&display=swap" rel="stylesheet" />
+  
+  <!-- Title and Favicon -->
+  <title>Titanic Quiz</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/titanic-favicon.png" />
+</head>
+<body>
+  <!-- Page header -->
+  <h1>
+    <a href="index.html" aria-label="link takes you back to homepage">Titanic Quiz</a>
+  </h1>
 
-    <title>Titanic Quiz</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/images/titanic-favicon.png"
-    />
-  </head>
-  <body>
-    <h1>
-      <a href="index.html" aria-label="link takes you back to homepage"
-        >Titanic Quiz</a
-      >
-    </h1>
+  <!-- Score display -->
+  <div id="scoreArea">
+    <span>Correct Answers:</span>
+    <span id="correctAnswers">0</span>
+    <span>Incorrect Answers:</span>
+    <span id="incorrectAnswers">0</span>
+  </div>
 
-    <div id="scoreArea">
-      <span>Correct Answers:</span>
-      <span id="correctAnswers">0</span>
-      <span>Incorrect Answers:</span>
-      <span id="incorrectAnswers">0</span>
-    </div>
-
-    <div id="quizArea">
-      <div id="selectLevel">
-        <h2 id="selectClassHeading">Select your Class...</h2>
-        <button id="easyButton" class="difficultyButtons">
-          First Class (Easy)
-        </button>
-        <button id="mediumButton" class="difficultyButtons">
-          Second Class (Medium)
-        </button>
-        <button id="hardButton" class="difficultyButtons">
-          Third Class (Hard)
-        </button>
-        <div class="rules-Button">
-          <button id="howToPlayButton">How to Play</button>
-        </div>
-      </div>
-
-      <div id="howToPlayPopup" class="popup">
-        <div class="popup-content">
-          <h3>How to Play</h3>
-          <p>
-            Embark on a Titanic adventure with our quiz! Choose your difficulty
-            level—Easy, Medium, or Hard—and tackle 15 questions about the
-            Titanic's history in each category. Simply select your answer and
-            hit "Submit" to see if you're right. Green means correct, red means
-            incorrect. After the 15th question, you'll get your score. Ready to
-            set sail? Click "Play Again?" for another round of Titanic trivia!
-          </p>
-
-          <button id="closePopup">Close</button>
-        </div>
-      </div>
-    </div>
-    <div id="questionArea">
-      <p id="questionText"></p>
-      <div class="choice-container">
-        <p class="choiceText"></p>
-      </div>
-      <div class="choice-container">
-        <p class="choiceText"></p>
-      </div>
-      <div class="choice-container">
-        <p class="choiceText"></p>
+  <!-- Quiz area -->
+  <div id="quizArea">
+    <!-- Difficulty level selection -->
+    <div id="selectLevel">
+      <h2 id="selectClassHeading">Select your Class...</h2>
+      <button id="easyButton" class="difficultyButtons">First Class (Easy)</button>
+      <button id="mediumButton" class="difficultyButtons">Second Class (Medium)</button>
+      <button id="hardButton" class="difficultyButtons">Third Class (Hard)</button>
+      
+      <!-- How to Play button -->
+      <div class="rules-Button">
+        <button id="howToPlayButton">How to Play</button>
       </div>
     </div>
 
-    <script src="assets/js/script.js"></script>
-  </body>
+    <!-- How to Play popup -->
+    <div id="howToPlayPopup" class="popup">
+      <div class="popup-content">
+        <h3>How to Play</h3>
+        <p>
+          Embark on a Titanic adventure with our quiz! Choose your difficulty level—Easy, Medium, or Hard—and tackle 15 questions about the Titanic's history in each category.
+          Simply select your answer and hit "Submit" to see if you're right. Green means correct, red means incorrect. After the 15th question, you'll get your score.
+          Ready to set sail? Click "Play Again?" for another round of Titanic trivia!
+        </p>
+        <button id="closePopup">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Question display -->
+  <div id="questionArea">
+    <p id="questionText"></p>
+    <div class="choice-container">
+      <p class="choiceText"></p>
+    </div>
+    <div class="choice-container">
+      <p class="choiceText"></p>
+    </div>
+    <div class="choice-container">
+      <p class="choiceText"></p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/script.js"></script>
+</body>
 </html>
+
