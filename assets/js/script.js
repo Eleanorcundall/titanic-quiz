@@ -365,10 +365,13 @@ function checkAnswer() {
   let selectedAnswer;
   let correctAnswer = currentQuestions[currentQuestionIndex].answer;
   let allAnswers = document.getElementsByName("choices");
+  let selectedAnswerIndex;
+  let answerClass;
 
   for (let i = 0; i < allAnswers.length; i++) {
     if (allAnswers[i].checked) {
       selectedAnswer = i.toString();
+      selectedAnswerIndex = i;
       break;
     }
   }
@@ -376,20 +379,30 @@ function checkAnswer() {
   console.log(`selectedAnswer: ${selectedAnswer}`);
 
   if (correctAnswer === selectedAnswer) {
-    alert("You got the answer correct!");
+    answerClass = "correct";
     console.log(correctAnswer);
     incrementScore();
   } else {
-    alert(`Oh no, you got it wrong!!`);
+    answerClass = "incorrect";
     incrementWrongAnswer();
   }
 
-  if (currentQuestionIndex < currentQuestions.length - 1) {
-    currentQuestionIndex++;
-    showQuestion(currentQuestions, currentQuestionIndex);
-  } else {
-    endQuiz();
-  }
+  document
+    .getElementsByName("choices")
+    [selectedAnswerIndex].parentElement.classList.add(answerClass);
+
+  //Delays the question to control the time in showing the feedback colour
+  setTimeout(() => {
+    if (currentQuestionIndex < currentQuestions.length - 1) {
+      currentQuestionIndex++;
+      showQuestion(currentQuestions, currentQuestionIndex);
+    } else {
+      endQuiz();
+    }
+    document
+      .getElementsByName("choices")
+      [selectedAnswerIndex].parentElement.classList.remove(answerClass);
+  }, 1000);
 }
 
 // increments correct answers
@@ -410,6 +423,7 @@ function endQuiz() {
   let correctAnswers = parseInt(
     document.getElementById("correctAnswers").innerText
   );
+
 
   let quizResults = document.createElement("p");
   if (correctAnswers < 5) {

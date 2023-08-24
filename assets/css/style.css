@@ -19,6 +19,7 @@ body{
 	color: red;
 }
 
+
 h1{
 	font-family: 'Great Vibes', 'raleway';
 	letter-spacing: 5px;
@@ -56,6 +57,31 @@ h2 {
 .difficultyButtons:hover {
 	border-color: antiquewhite;
 }
+#easyButton {
+	border-color: #d4af37;
+	border-width: 6px;
+	padding: 6px;
+}
+#easyButton:hover {
+	border-color: red;
+}
+#mediumButton {
+	border-color: silver;
+	border-width: 6px;
+	padding: 6px;
+
+}
+#mediumButton:hover {
+	border-color: red;
+}
+#hardButton {
+	border-color:  #cd7f32;
+	border-width: 6px;
+	padding: 6px;
+}
+#hardButton:hover {
+	border-color: red;
+}
 
 .questionStyling {
 	text-align: center;
@@ -91,34 +117,24 @@ h2 {
 .submitButtonStyling:hover {
 	text-decoration: underline;
 }
+.correct {
+	background-color: green !important;
+	border-radius: 20px;
+}
+
+.incorrect {
+	background-color: red !important;
+	border-radius: 20px;
+}
+
+.choice-container {
+	display: flex;
+}
+
 .inputStyling {
 	transform: scale(1.5)
 }
-#easyButton {
-	border-color: #d4af37;
-	border-width: 6px;
-	padding: 6px;
-}
-#easyButton:hover {
-	border-color: red;
-}
-#mediumButton {
-	border-color: silver;
-	border-width: 6px;
-	padding: 6px;
 
-}
-#mediumButton:hover {
-	border-color: red;
-}
-#hardButton {
-	border-color:  #cd7f32;
-	border-width: 6px;
-	padding: 6px;
-}
-#hardButton:hover {
-	border-color: red;
-}
 
 .playAgainStyling {
     cursor: pointer;
