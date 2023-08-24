@@ -96,12 +96,12 @@ const questions = {
     },
     {
       question:
-        " At least how many people lost their lives when the Titanic sunk",
+        " At least how many people lost their lives when the Titanic sunk?",
       choices: ["At least 100 ", "At least 500", "At least 1,500"],
       answer: "2",
     },
     {
-      question: "How many Voyages had the Titanic previously been on",
+      question: "How many Voyages had the Titanic previously been on?",
       choices: ["2", "6", "0, it was her Maiden Voyage"],
       answer: "2",
     },
@@ -144,7 +144,7 @@ const questions = {
       answer: "0",
     },
     {
-      question: "How did the Titanic Hit the Iceberg",
+      question: "How did the Titanic Hit the Iceberg?",
       choices: [
         "Head on collison",
         "On the Left, Port side",
@@ -158,7 +158,7 @@ const questions = {
       answer: "1",
     },
     {
-      question: "How many water tight compartments did the Titnaic have?",
+      question: "How many water tight compartments did the Titanic have?",
       choices: ["8", "16", "25"],
       answer: "1",
     },
@@ -188,7 +188,7 @@ const questions = {
     {
       question: "How many dogs survived the sinking?",
       choices: ["3", "6", "12"],
-      answer: "2",
+      answer: "0",
     },
   ],
   hardQuestions: [
@@ -402,7 +402,7 @@ function checkAnswer() {
     document
       .getElementsByName("choices")
       [selectedAnswerIndex].parentElement.classList.remove(answerClass);
-  }, 1000);
+  }, 1500);
 }
 
 // increments correct answers
