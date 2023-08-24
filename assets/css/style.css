@@ -20,11 +20,13 @@ body{
 }
 
 
-h1{
+h1, a {
 	font-family: 'Great Vibes', 'raleway';
 	letter-spacing: 5px;
 	text-align: center;
 	font-size: 70px;
+	text-decoration: none;
+	color: white;
 }
 
 h2 {
