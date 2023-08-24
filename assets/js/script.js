@@ -393,6 +393,9 @@ function showQuestion(questions, currentQuestionIndex) {
 }
 // Function to check the selected answer and provide feedback
 function checkAnswer() {
+
+  submitButton.disabled = true;
+
   let currentQuestions = questions[difficultySelected];
   let selectedAnswer;
   let correctAnswer = currentQuestions[currentQuestionIndex].answer;
@@ -407,6 +410,7 @@ function checkAnswer() {
       break;
     }
   }
+  
 
   if (correctAnswer === selectedAnswer) {
     answerClass = "correct";
@@ -422,6 +426,8 @@ function checkAnswer() {
 
   // Delays the question to control the time in showing the feedback colour
   setTimeout(() => {
+    // Enable the submit button
+    submitButton.disabled = false;
     if (currentQuestionIndex < currentQuestions.length - 1) {
       currentQuestionIndex++;
       showQuestion(currentQuestions, currentQuestionIndex);
