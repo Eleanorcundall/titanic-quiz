@@ -110,7 +110,7 @@ const questions = {
     {
       question: "What time did the Titanic hit the iceberg?",
       choices: ["10:00 pm", "2:20 am", "11:40 pm"],
-      answer: "2", // The index of the correct answer choice
+      answer: "2",
     },
     {
       question: "How long did it take to build the Titanic? ",
@@ -193,86 +193,97 @@ const questions = {
   ],
   hardQuestions: [
     {
-      question: "What time did the Titanic hit the iceberg?",
-      choices: ["10:00 pm", "2:20 am", "11:40 pm"],
-      answer: "2", // The index of the correct answer choice
-    },
-    {
-      question: "How long did it take to build the Titanic? ",
-      choices: ["3 Years", "8 Years", "18 Months"],
-      answer: "0",
-    },
-    {
-      question: "When was the wreck of the Titanic discovered?",
-      choices: ["1913", "1956", "1985"],
-      answer: "2",
-    },
-    {
-      question: "In which city was the Titanic registered?",
-      choices: ["London, UK", "New York City, United States ", "Liverpool, UK"],
+      question: "Who first spotted the iceberg from the crows nest?",
+      choices: ["Charles Lightoller", "Jack Phillips", "Fredrick Fleet"],
       answer: "2",
     },
     {
       question:
-        "How long did it take between the moment the Titanic hit the iceberg and the moment it sank?",
-      choices: ["15 Minutes", "2 Hours 40 Minues", "1 hour 15 Minutes"],
+        "How long did it take for the rescue ship Carpathia to arrive on the scene?",
+      choices: ["1 hour", "4 hours", "2 days"],
       answer: "1",
     },
     {
-      question: "How long was the Titanic?",
-      choices: ["882 feet 9 inches", "1045 feet 6 inches", "452 feet 4 inches"],
+      question: "What was the name of the richest passenger on the Titanic?",
+      choices: ["John Jacob Astor IV", "Isidor Straus", "Bruce Ismay"],
       answer: "0",
     },
     {
-      question: "Who was the Titanics Designer?",
-      choices: ["Thomas Andrews", "Bruce Ismay", "Edward John Smith"],
-      answer: "0",
+      question:
+        "What was the name of the newspaper that broke the story of the Titanic sinking?",
+      choices: ["The Guardian", "The New York Times", "The Examiner"],
+      answer: "1",
     },
     {
-      question: "How did the Titanic Hit the Iceberg",
+      question:
+        "What was the final song played by the Titanic’s band before the ship sank?",
       choices: [
-        "Head on collison",
-        "On the Left, Port side",
-        "On the Right, starboard side",
+        "The Lord is my shepherd ",
+        "Nearer, My God, to Thee",
+        "Amazing Grace",
       ],
-      answer: "2",
-    },
-    {
-      question: "How many dogs were aboard the Titanic?",
-      choices: ["3", "12", "6"],
       answer: "1",
     },
     {
-      question: "How many water tight compartments did the Titnaic have?",
-      choices: ["8", "16", "25"],
-      answer: "1",
+      question: "How many children died in the sinking of the Titanic?",
+      choices: ["Approximately 52", "Approximately 122", "Approximately 332"],
+      answer: "0",
     },
     {
-      question:
-        "The Titanic was equipped to hold 64 lifeboats, but how many did it actually have?",
-      choices: ["20", "65", "63"],
+      question: "What was the Titanic’s top speed?",
+      choices: ["24 knots", "28 knots", "22 knots"],
       answer: "0",
     },
     {
       question:
-        "Each lifeboat could hold 40 to 65 people (depending on what style it was). How many people were aboard the first lifeboat? ",
-      choices: ["28", "40", "65"],
+        "Who wrote the song “My Heart Will Go On” for the Titanic movie?",
+      choices: ["Celine Dion", "James Cameron", " James Horner"],
+      answer: "2",
+    },
+    {
+      question: "What was the name of the iceberg that the Titanic hit?",
+      choices: ["Great White", "It had no name", "Great Blue"],
+      answer: "1",
+    },
+    {
+      question: "Who played the old Rose in the movie?",
+      choices: [
+        "Kate Winslets Grandmother",
+        "Gloria Stuart, who was also a real Titanic survivor",
+        "Eva Hart, who was also a real Titanic survivor",
+      ],
+      answer: "1",
+    },
+    {
+      question:
+        "Titanic is the only ship in history, which was sunk by an iceberg.",
+      choices: [
+        "True",
+        "There were several ships with the same doom",
+        "There was 1 other ship with the same doom",
+      ],
       answer: "0",
     },
     {
       question:
-        "How many of Titanic water tight compartments were breached in the collison?",
-      choices: ["3", "4", "6"],
+        "How much time did pass since lookouts noticed the iceberg before the course was changed?",
+      choices: ["10 Seconds", "1 minute", "30 seconds"],
       answer: "2",
     },
     {
-      question: "How many movies about the Titanic have been filmed?",
-      choices: ["2", "1", "16"],
+      question: "Which of the following wasn't on the ship?",
+      choices: ["Car garage", " Golf course", "Jeweller's workshop"],
       answer: "2",
     },
     {
-      question: "How many dogs survived the sinking?",
-      choices: ["3", "6", "12"],
+      question:
+        "As Titanic sank, which wealthy passenger changed into formal attire and reportedly said, “We’re dressed up in our best and are prepared to go down like gentlemen”?",
+      choices: ["J.P. Morgan", "Isidor Strauss", "Benjamin Guggenheim"],
+      answer: "2",
+    },
+    {
+      question: "What was the name of the bandleader on Titanic?",
+      choices: ["Wallace Hartley", "Jock Hume", "Percy Taylor"],
       answer: "2",
     },
   ],
