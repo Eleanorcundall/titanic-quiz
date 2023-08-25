@@ -23,24 +23,19 @@ closePopupButton.addEventListener("click", () => {
 
 // Call this function when the page loads to set up the event listener
 document.addEventListener("DOMContentLoaded", function () {
-
   document.getElementById("scoreArea").style.display = "none";
   // Gets each Button on the page and listens for which Difficulty has been clicked by the user
   let buttons = document.getElementsByClassName("difficultyButtons");
   for (let button of buttons) {
     button.addEventListener("click", function () {
-      
       if (this.id === "easyButton") {
-        
         difficultySelected = "easyQuestions";
-        
+
         showQuestion(questions.easyQuestions, currentQuestionIndex);
       } else if (this.id === "mediumButton") {
-      
         difficultySelected = "mediumQuestions";
         showQuestion(questions.mediumQuestions, currentQuestionIndex);
       } else if (this.id === "hardButton") {
-      
         difficultySelected = "hardQuestions";
         showQuestion(questions.hardQuestions, currentQuestionIndex);
       }
@@ -52,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
   submitButton.textContent = "Submit";
   submitButton.classList.add("submitButtonStyling");
   submitButton.addEventListener("click", function () {
-
     let selectedInputs = document.querySelectorAll(
       "input[type='radio']:checked"
     );
@@ -64,8 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 // Function to display the current question and answer choices
 function showQuestion(questions, currentQuestionIndex) {
   document.getElementById("selectLevel").style.display = "none";
@@ -73,7 +65,6 @@ function showQuestion(questions, currentQuestionIndex) {
   document.getElementById("selectClassHeading").style.display = "none";
   let questionContainer = document.getElementById("questionArea");
   questionContainer.innerHTML = ""; // Clear existing question
-  
 
   let questionText = document.createElement("p");
   questionText.textContent = questions[currentQuestionIndex].question;
@@ -86,27 +77,23 @@ function showQuestion(questions, currentQuestionIndex) {
     let choiceText = document.createElement("p");
     choiceText.textContent = answerChoices[i];
     choiceContainer.appendChild(choiceText);
-    
 
     let choiceInput = document.createElement("input");
     choiceInput.type = "radio";
     choiceInput.name = "choices";
     choiceInput.value = i;
 
-
-    choiceInput.classList.add("inputStyling")
+    choiceInput.classList.add("inputStyling");
     choiceContainer.appendChild(choiceInput);
     questionContainer.appendChild(choiceContainer);
     questionContainer.classList.add("questionStyling");
     choiceText.classList.add("questionTextStyling");
-    
   }
   questionContainer.appendChild(submitButton);
   document.getElementById("quizArea").appendChild(questionContainer);
 }
 // Function to check the selected answer and provide feedback
 function checkAnswer() {
-
   submitButton.disabled = true;
 
   let currentQuestions = questions[difficultySelected];
@@ -123,7 +110,6 @@ function checkAnswer() {
       break;
     }
   }
-  
 
   if (correctAnswer === selectedAnswer) {
     answerClass = "correct";
@@ -136,6 +122,9 @@ function checkAnswer() {
   document
     .getElementsByName("choices")
     [selectedAnswerIndex].parentElement.classList.add(answerClass);
+  document
+    .getElementsByName("choices")
+    [correctAnswer].parentElement.classList.add("correct");
 
   // Delays the question to control the time in showing the feedback colour
   setTimeout(() => {
@@ -173,7 +162,6 @@ function endQuiz() {
     document.getElementById("correctAnswers").innerText
   );
 
-
   let quizResults = document.createElement("p");
   if (correctAnswers < 5) {
     quizResults.innerHTML = `Hmm.. You Got ${correctAnswers} out of 15, you need more practice!!!`;
@@ -183,8 +171,7 @@ function endQuiz() {
     quizResults.innerHTML = `Well Done!!! You Got ${correctAnswers} out of 15... `;
   } else if (correctAnswers === 15) {
     quizResults.innerHTML = `WOW!!! You Got ${correctAnswers} out of 15... Full Marks! `;
-  } 
-  
+  }
 
   let resultContainer = document.createElement("div");
   resultContainer.appendChild(quizResults);
