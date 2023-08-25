@@ -300,7 +300,8 @@ function questionsFunction() {
         answer: "0",
       },
       {
-        question: "What was the name of the ship that came to the Titanic’s rescue?",
+        question:
+          "What was the name of the ship that came to the Titanic’s rescue?",
         choices: [
           "RMS Empress of China",
           "RMS Empress of India ",
@@ -309,7 +310,8 @@ function questionsFunction() {
         answer: "2",
       },
       {
-        question: " At least how many people lost their lives when the Titanic sunk?",
+        question:
+          " At least how many people lost their lives when the Titanic sunk?",
         choices: ["At least 100 ", "At least 500", "At least 1,500"],
         answer: "2",
       },
@@ -337,17 +339,26 @@ function questionsFunction() {
       },
       {
         question: "In which city was the Titanic registered?",
-        choices: ["London, UK", "New York City, United States ", "Liverpool, UK"],
+        choices: [
+          "London, UK",
+          "New York City, United States ",
+          "Liverpool, UK",
+        ],
         answer: "2",
       },
       {
-        question: "How long did it take between the moment the Titanic hit the iceberg and the moment it sank?",
+        question:
+          "How long did it take between the moment the Titanic hit the iceberg and the moment it sank?",
         choices: ["15 Minutes", "2 Hours 40 Minues", "1 hour 15 Minutes"],
         answer: "1",
       },
       {
         question: "How long was the Titanic?",
-        choices: ["882 feet 9 inches", "1045 feet 6 inches", "452 feet 4 inches"],
+        choices: [
+          "882 feet 9 inches",
+          "1045 feet 6 inches",
+          "452 feet 4 inches",
+        ],
         answer: "0",
       },
       {
@@ -375,17 +386,20 @@ function questionsFunction() {
         answer: "1",
       },
       {
-        question: "The Titanic was equipped to hold 64 lifeboats, but how many did it actually have?",
+        question:
+          "The Titanic was equipped to hold 64 lifeboats, but how many did it actually have?",
         choices: ["20", "65", "63"],
         answer: "0",
       },
       {
-        question: "Each lifeboat could hold 40 to 65 people (depending on what style it was). How many people were aboard the first lifeboat? ",
+        question:
+          "Each lifeboat could hold 40 to 65 people (depending on what style it was). How many people were aboard the first lifeboat? ",
         choices: ["28", "40", "65"],
         answer: "0",
       },
       {
-        question: "How many of Titanic water tight compartments were breached in the collison?",
+        question:
+          "How many of Titanic water tight compartments were breached in the collison?",
         choices: ["3", "4", "6"],
         answer: "2",
       },
@@ -407,7 +421,8 @@ function questionsFunction() {
         answer: "2",
       },
       {
-        question: "How long did it take for the rescue ship Carpathia to arrive on the scene?",
+        question:
+          "How long did it take for the rescue ship Carpathia to arrive on the scene?",
         choices: ["1 hour", "4 hours", "2 days"],
         answer: "1",
       },
@@ -417,12 +432,14 @@ function questionsFunction() {
         answer: "0",
       },
       {
-        question: "What was the name of the newspaper that broke the story of the Titanic sinking?",
+        question:
+          "What was the name of the newspaper that broke the story of the Titanic sinking?",
         choices: ["The Guardian", "The New York Times", "The Examiner"],
         answer: "1",
       },
       {
-        question: "What was the final song played by the Titanic’s band before the ship sank?",
+        question:
+          "What was the final song played by the Titanic’s band before the ship sank?",
         choices: [
           "The Lord is my shepherd ",
           "Nearer, My God, to Thee",
@@ -441,7 +458,8 @@ function questionsFunction() {
         answer: "0",
       },
       {
-        question: "Who wrote the song “My Heart Will Go On” for the Titanic movie?",
+        question:
+          "Who wrote the song “My Heart Will Go On” for the Titanic movie?",
         choices: ["Celine Dion", "James Cameron", " James Horner"],
         answer: "2",
       },
@@ -460,16 +478,18 @@ function questionsFunction() {
         answer: "1",
       },
       {
-        question: "Titanic is the only ship in history, which was sunk by an iceberg.",
+        question:
+          "Ida and Isidor Straus were a well-known couple on the Titanic. What decision did they make during the ship's sinking that reflected their strong bond?",
         choices: [
-          "True",
-          "There were several ships with the same doom",
-          "There was 1 other ship with the same doom",
+          "They chose to stay in their cabin and hold each other until the end.",
+          "They decided to jump overboard and swim to safety together.",
+          "They joined the ship's band in playing music to calm passengers.",
         ],
         answer: "0",
       },
       {
-        question: "How much time did pass since lookouts noticed the iceberg before the course was changed?",
+        question:
+          "How much time did pass since lookouts noticed the iceberg before the course was changed?",
         choices: ["10 Seconds", "1 minute", "30 seconds"],
         answer: "2",
       },
@@ -479,7 +499,8 @@ function questionsFunction() {
         answer: "2",
       },
       {
-        question: "As Titanic sank, which wealthy passenger changed into formal attire and reportedly said, “We’re dressed up in our best and are prepared to go down like gentlemen”?",
+        question:
+          "As Titanic sank, which wealthy passenger changed into formal attire and reportedly said, “We’re dressed up in our best and are prepared to go down like gentlemen”?",
         choices: ["J.P. Morgan", "Isidor Strauss", "Benjamin Guggenheim"],
         answer: "2",
       },
