@@ -44,6 +44,17 @@
 ### Future Feature: Timed Challenge Mode:
   - Incorporating a "Timed Challenge" mode into the Titanic Quiz could elevate the excitement and add a competitive edge to the experience. This feature would present users with a limited amount of time to answer each question. The timer ticking down would create a sense of urgency, encouraging participants to think quickly and make decisions under pressure, much like the real-life scenarios faced on the Titanic. Users who successfully complete the quiz within the allotted time could earn extra points or unlock special achievements. The Timed Challenge mode would attract users seeking an additional level of challenge and thrill, while also catering to those who enjoy testing their knowledge against the clock. This feature aligns with the overall goal of providing a dynamic and engaging quiz experience for a diverse audience.
 
+## Colour Scheme and media:
+
+ ### Dark Blue Main Divs: 
+  - The deep, dark blue used for the main divs in the project draws inspiration from the serenity of a night sky and the calm waters of the sea. This choice not only evokes a sense of tranquility but also pays homage to the historical setting of the Titanic disaster.
+
+ ### Night-time Titanic Imagery: 
+  - The images incorporated into the project are all of the Titanic at night, the time when the ill-fated disaster occurred. This visual consistency establishes a connection between the design elements and the historical context, enhancing the storytelling aspect of the project.
+
+ ### Ancient Paper Background: 
+ - The use of an old paper background for the difficulty buttons adds a vintage touch to the overall design. This subtle detail gives the impression of aged tickets, reminiscent of the time when the Titanic set sail. The combination of modern interactivity and vintage aesthetics creates an intriguing contrast that captures users' attention.   
+
 ## Testing 
  - In the process of ensuring the functionality and reliability of my project, I've conducted a thorough testing phase to confirm that all features work seamlessly and contribute to a user-friendly experience. Each feature has been meticulously tested to meet its intended purpose, aligning with the users' goals and expectations. My project provides a streamlined and intuitive interface, guiding users effortlessly towards their objectives.
 
@@ -92,6 +103,23 @@
  - In the source section menu, select the Master Branch,
  - When the master branch has been selected, the page will refresh and come up with a notification telling you the deployment has been     successful.  
  - You can find the link for titanic-quiz here - https://eleanorcundall.github.io/titanic-quiz/
+
+## Credits 
+
+### Content:
+
+ - Fonts used are from Google fonts.
+ - I used the website Stack Overflow for help and advice throughout the project.
+ - I used the love maths project to help me with how to increment the score.
+ - I used Google to help me with some of the quiz questions and answers. 
+ - My mentour Derek McAuley helped me with how to indicate which questions was correct/ incorrect.
+
+### Media: 
+
+- Background images taken from https://wallpapersafari.com/ 
+- Images for difficulty buttons taken from https://www.dreamstime.com/ 
+
+
 
       
 
