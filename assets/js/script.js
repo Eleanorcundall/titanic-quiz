@@ -1,3 +1,5 @@
+/* eslint-env es6 */
+
 // Main Question Variable that stores all Questions difficulties
 const questions = questionsFunction();
 

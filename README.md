@@ -37,9 +37,8 @@
  ![Image showing quiz tally of both correct and incorrect answers](./assets/images/score-tally-screenshot.png)
 
 ### Insightful Results and Play again button: 
-  - At the end of the quiz, users are presented with their score and a personalized message based on their performance. This adds encouragement and motivation for users to further explore the Titanic's history and get better at the quiz. Directly below the score and message users have the option to instantly play the quiz again. This allows them to revisit questions and improve their knowledge over time.
-
-
+  - At the end of the quiz, users are presented with their score and a personalized message based on their performance. This adds encouragement and motivation for users to further explore the Titanic's history and get better at the quiz. 
+  - Directly below the score and message users have the option to instantly play the quiz again. This allows them to revisit questions and improve their knowledge over time.
   ![Image showing end quiz score and message](./assets/images/end-result-score-screenshot.png)
 
 ### Future Feature: Timed Challenge Mode:
@@ -50,10 +49,54 @@
 
  - Furthermore, I've assessed the compatibility of my project across various browsers and screen sizes. It's essential that the project maintains its integrity and usability regardless of the user's preferred browser or device. Through rigorous testing, I've ascertained that my project maintains its responsiveness and visual appeal, adapting gracefully to different viewing environments.
 
- ### Submit Button Bug 
+ ### Submit Button Bug:
   - During the testing phase, I encountered an issue related to the scoring mechanism in my project. Specifically, I found that users were able to increment their score multiple times during the "check answer" process, leading to inaccurate results. This occurred because the "submit" button was not disabled while the answer was being evaluated, allowing users to click it repeatedly before the evaluation was complete.
 
   - To address this bug and ensure accurate scoring, I implemented a solution to disable the "submit" button during the answer evaluation process. By disabling the button temporarily, users are prevented from submitting additional responses until the evaluation is complete and the appropriate feedback has been provided. This solution effectively prevents users from exploiting the scoring mechanism and ensures that their score reflects their actual performance in the quiz
+
+ ### Validator Testing:
+ - HTML
+    - No errors were returned when passing through the [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-maths%2F)
+ - CSS
+    - No errors were found when passing through the [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-maths%252F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+-  JavaScript
+    - No errors were found when passing through the [Jshint validator](https://jshint.com/)
+      
+      - The following metrics were returned: 
+
+        There are 14 functions in this file.
+
+        Function with the largest signature take 2 arguments, while the median is 0.
+
+        Largest function has 25 statements in it, while the median is 3.5.
+
+        The most complex function has a cyclomatic complexity value of 5 while the median is 2.
+
+   - There were also some warnings when passed through the validator. These warnings primarily stem from the use of features introduced in  ECMAScript 6 (ES6), such as const, let, arrow functions, and template literals. These features enhance code readability, maintainability, and performance. To address these warnings and provide a better user experience, I ensured compatibility with modern browsers that support ES6 features. Rest assured, these warnings are not indicative of errors but rather a reflection of the code's utilization of advanced language features. As a result, the project can fully capitalize on the latest enhancements in JavaScript and provide an optimal user experience.
+
+
+ ### Lighthouse Testing:
+
+  - To ensure the high quality and optimal performance of my project, I conducted thorough testing using Lighthouse, a powerful tool within Google Chrome Developer Tools. Lighthouse evaluates various aspects of web pages, including performance, accessibility, best practices, and SEO. Based on the Lighthouse results, my project received a performance score of 82, while achieving perfect scores in accessibility (100), best practices (100), and a strong score in SEO (89). By addressing the recommendations provided by Lighthouse, I've fine-tuned my project to deliver a smooth and user-friendly experience, while adhering to industry standards and best practices.
+
+  ![Image showing lighthouse result resting](./assets/images/lighthouse-screenshot.png)
+
+ ### Unfixed bugs:
+  - Currently, I have no unfixed bugs in my project. 
+ 
+ ## Deployment
+
+ ### The site was deployed using GitHub pages using following steps:
+
+ - In the titanic-quiz repository, go to the Settings tab.
+ - In the source section menu, select the Master Branch,
+ - When the master branch has been selected, the page will refresh and come up with a notification telling you the deployment has been     successful.  
+ - You can find the link for titanic-quiz here - https://eleanorcundall.github.io/titanic-quiz/
+
+      
+
+
+
 
 
 
