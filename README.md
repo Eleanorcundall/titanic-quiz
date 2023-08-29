@@ -83,7 +83,12 @@
 
         The most complex function has a cyclomatic complexity value of 5 while the median is 2.
 
-   - There were also some warnings when passed through the validator. These warnings primarily stem from the use of features introduced in  ECMAScript 6 (ES6), such as const, let, arrow functions, and template literals. These features enhance code readability, maintainability, and performance. To address these warnings and provide a better user experience, I ensured compatibility with modern browsers that support ES6 features. Rest assured, these warnings are not indicative of errors but rather a reflection of the code's utilization of advanced language features. As a result, the project can fully capitalize on the latest enhancements in JavaScript and provide an optimal user experience.
+   - There were also some warnings when passed through the validator. These warnings primarily stem from the use of features introduced in  ECMAScript 6 (ES6), such as const, let, arrow functions, and template literals. These features enhance code readability, maintainability, and performance, I then discovered that you can change the version of Javascript within the Validator which returned only 1 warning. 
+
+   ![Image showing 1 warning from jsHint](./assets/images/jshint-javascript.png)
+
+   - The warning indicates that declaring functions within loops that reference external variables might lead to confusion and unexpected behavior due to variable scope interactions.
+   - To address this warning, I could restructure the code by passing variables as function parameters or using closures. These approaches help manage scope and reduce potential ambiguity. However, for the sake of simplicity and clarity within this project, I've chosen to keep the current code structure. Although the warning raises a valid concern, I believe the current code layout remains intuitive and suitable for this project's scope.
 
 
  ### Lighthouse Testing:
