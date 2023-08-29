@@ -1,7 +1,7 @@
 /* eslint-env es6 */
 
 // Main Question Variable that stores all Questions difficulties
-const questions = questionsFunction();
+const questions = getQuestions();
 
 // Variables Created For the Global Scop
 let currentQuestionIndex = 0; // keeps track of current question
@@ -201,7 +201,7 @@ function removeAllChildren(element) {
 }
 
 // Function to keep all of the questions
-function questionsFunction() {
+function getQuestions() {
   return {
     easyQuestions: [
       {
