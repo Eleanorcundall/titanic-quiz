@@ -1,106 +1,102 @@
 /* For Main Body and Background */
-body{
-	color: white;
-	background-image: url(../images/titanic-bg.jpg);
-	background-repeat: no-repeat; 
-	background-size:cover;
-
+body {
+  color: white;
+  background-image: url(../images/titanic-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* For the tally of correct/ incorrect answers throughout Quiz*/
 #correctAnswers {
-	color: green;
-	
+  color: green;
 }
-#scoreArea  {
-	text-align: center;
-	font-family: 'Courier New', Courier, monospace;
-	
+#scoreArea {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
 }
 #incorrectAnswers {
-	color: red;
+  color: red;
 }
 
 /* Main landing page CSS */
-h1, a {
-	font-family: 'Great Vibes', 'raleway';
-	letter-spacing: 5px;
-	text-align: center;
-	font-size: 70px;
-	text-decoration: none;
-	color: white;
+h1,
+a {
+  font-family: "Great Vibes", "raleway";
+  letter-spacing: 5px;
+  text-align: center;
+  font-size: 70px;
+  text-decoration: none;
+  color: white;
 }
 
 h2 {
-	font-size: 50px;
+  font-size: 50px;
 }
 #selectLevel {
-	text-align: center;
-	margin: 0 auto;
-	background-color: #000028;
-	opacity: 80%;
-	height: 400px;
-	width: 1000px;
-	border-radius: 20px;
-	font-family: 'Great Vibes', 'raleway';
-	letter-spacing: 5px;
-	font-size: 30px;
-}	
+  text-align: center;
+  margin: 0 auto;
+  background-color: #000028;
+  opacity: 80%;
+  height: 400px;
+  width: 1000px;
+  border-radius: 20px;
+  font-family: "Great Vibes", "raleway";
+  letter-spacing: 5px;
+  font-size: 30px;
+}
 
 .difficultyButtons {
-    cursor: pointer;
-	font-family: 'great vibes';
-	width: 20%;
-	height: 120px;
-	font-size: 35px;
-	border-radius: 10px;
-	background-image: url(../images/buttons-bg.webp);
-	margin: 25px;
-	
+  cursor: pointer;
+  font-family: "great vibes";
+  width: 20%;
+  height: 120px;
+  font-size: 35px;
+  border-radius: 10px;
+  background-image: url(../images/buttons-bg.webp);
+  margin: 25px;
 }
 .difficultyButtons:hover {
-	border-color: antiquewhite;
+  border-color: antiquewhite;
 }
 #easyButton {
-	border-color: #d4af37;
-	border-width: 6px;
-	padding: 6px;
+  border-color: #d4af37;
+  border-width: 6px;
+  padding: 6px;
 }
 #easyButton:hover {
-	border-color: red;
+  border-color: red;
 }
 #mediumButton {
-	border-color: silver;
-	border-width: 6px;
-	padding: 6px;
-
+  border-color: silver;
+  border-width: 6px;
+  padding: 6px;
 }
 #mediumButton:hover {
-	border-color: red;
+  border-color: red;
 }
 #hardButton {
-	border-color:  #cd7f32;
-	border-width: 6px;
-	padding: 6px;
+  border-color: #cd7f32;
+  border-width: 6px;
+  padding: 6px;
 }
 #hardButton:hover {
-	border-color: red;
+  border-color: red;
 }
 .howToPlayDiv {
-	display: block;
-	text-align: -webkit-center;
+  display: block;
+  text-align: -webkit-center;
 }
 
 #howToPlayButton {
-	cursor: pointer;
-	font-family: 'Courier New', Courier, monospace;
-	width: fit-content;
-	height: 50px;
-	font-size: 20px;
-	border-radius: 10px;
-	background-color: #000026;
-	color: white;
-	border-color: white;
-	margin: 50px;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  width: fit-content;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #000026;
+  color: white;
+  border-color: white;
+  margin: 50px;
 }
 .popup {
   display: none;
@@ -112,7 +108,7 @@ h2 {
   background-color: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .popup-content {
@@ -124,230 +120,228 @@ h2 {
 }
 
 #closePopup {
- 	cursor: pointer;
-	font-family: 'Courier New', Courier, monospace;
-	width: fit-content;
-	height: 50px;
-	font-size: 20px;
-	border-radius: 10px;
-	background-color: #000026;
-	color: white;
-	border-color: white;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  width: fit-content;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #000026;
+  color: white;
+  border-color: white;
 }
 
 /* Styles questions for main quiz */
 .questionStyling {
-	text-align: center;
-	margin: 0 auto;
-	background-color:  #000028;
-	opacity: 80%;
-	height: 450px;
-	width: 1000px;
-	border-radius: 20px;
-	font-family: 'Courier New', Courier, monospace;
-	letter-spacing: 3px;
-	font-size: 30px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #000028;
+  opacity: 80%;
+  height: 450px;
+  width: 1000px;
+  border-radius: 20px;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 3px;
+  font-size: 30px;
 }
 
 .questionTextStyling {
-	margin: 20px;
-	font-family: 'Courier New', Courier, monospace;
-	font-size: 20px;
+  margin: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
 }
 
 .inputStyling {
-	transform: scale(1.5)
+  transform: scale(1.5);
 }
 
 .choice-container {
-	display: flex;
+  display: flex;
 }
 
 .submitButtonStyling {
-    cursor: pointer;
-	font-family: 'Courier New', Courier, monospace;
-	width: 10%;
-	height: 10%;
-	font-size: 20px;
-	border-radius: 10px;
-	background-color: #000026;
-	color: white;
-	border-color: white;
-
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  width: 10%;
+  height: 10%;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #000026;
+  color: white;
+  border-color: white;
 }
 .submitButtonStyling:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* CSS to indicate if question selected by user is correct or incorrect */
 .correct {
-	background-color: green !important;
-	border-radius: 20px;
+  background-color: green !important;
+  border-radius: 20px;
 }
 
 .incorrect {
-	background-color: red !important;
-	border-radius: 20px;
+  background-color: red !important;
+  border-radius: 20px;
 }
 
 /* Css for Styling quiz results and button to play again */
 .quizResultsStyling {
-	padding: 50px;
-	text-align: center;
-	margin: 0 auto;
-	background-color: #000028;
-	opacity: 90%;
-	height: 300px;
-	width: 1000px;
-	border-radius: 20px;
-	font-family: 'Courier New', Courier, monospace;
-	letter-spacing: 0px;
-	font-size: 27px;
+  padding: 50px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #000028;
+  opacity: 90%;
+  height: 300px;
+  width: 1000px;
+  border-radius: 20px;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0px;
+  font-size: 27px;
 }
 
 .playAgainStyling {
-    cursor: pointer;
-	font-family: 'Courier New', Courier, monospace;
-	width: 20%;
-	height: 30%;
-	font-size: 30px;
-	border-radius: 10px;
-	background-color: #000026;
-	color: white;
-	border-color: white;
-	text-align: center;
-	margin-top: 60px;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  width: 20%;
+  height: 30%;
+  font-size: 30px;
+  border-radius: 10px;
+  background-color: #000026;
+  color: white;
+  border-color: white;
+  text-align: center;
+  margin-top: 60px;
 }
 
 .playAgainStyling:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* For Mobile screens with a max-width of 575 pixels */
 
-@media only screen and (max-width: 575px){
-body{
-	color: white;
-	background-image: url(../images/titanic-bg-575.jpg);
-	background-size: cover;
-}
+@media only screen and (max-width: 575px) {
+  body {
+    color: white;
+    background-image: url(../images/titanic-bg-575.jpg);
+    background-size: cover;
+  }
 
-h1 {
-	font-size: 45px;
-}
-h2 {
-	font-size: 33px;
-}
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 33px;
+  }
 
-#selectLevel {
-	width: fit-content;
-	height: fit-content;
-}
+  #selectLevel {
+    width: fit-content;
+    height: fit-content;
+  }
 
-.difficultyButtons {
-text-align: center;
-width: 70%;
-height: 100px;
-}
+  .difficultyButtons {
+    text-align: center;
+    width: 70%;
+    height: 100px;
+  }
 
-.questionStyling {
-	text-align: center;
-	width: 90%;
-	height: fit-content;
-	font-size: 20px;
-}
+  .questionStyling {
+    text-align: center;
+    width: 90%;
+    height: fit-content;
+    font-size: 20px;
+  }
 
-.questionTextStyling {
-	font-size: 18px;
-	margin-top: 60px;
-}
+  .questionTextStyling {
+    font-size: 18px;
+    margin-top: 60px;
+  }
 
-.submitButtonStyling {
-	width: fit-content;
-	margin: 30px;
-}
-.quizResultsStyling {
-	margin-top: 50px;
-	text-align: center;
-	width: 70%;
-	height: 200px;
-	font-size: 25px;
-}
+  .submitButtonStyling {
+    width: fit-content;
+    margin: 30px;
+  }
+  .quizResultsStyling {
+    margin-top: 50px;
+    text-align: center;
+    width: 70%;
+    height: 200px;
+    font-size: 25px;
+  }
 
-.playAgainStyling {
-	font-size: 20px;
-	width: fit-content;
-	margin: 5px;
-}
+  .playAgainStyling {
+    font-size: 20px;
+    width: fit-content;
+    margin: 5px;
+  }
 
-#correctAnswers, #incorrectAnswers {
- display: block;
-}
+  #correctAnswers,
+  #incorrectAnswers {
+    display: block;
+  }
 }
 
 /* For Mobile screens with a max-width of 1200 pixels and min-width of 575 pixels*/
 @media only screen and (max-width: 1200px) and (min-width: 575px) {
+  body {
+    background-image: url(../images/titanic-bg-1200.jpg);
+  }
 
-	body {
-		background-image: url(../images/titanic-bg-1200.jpg);
-	}
+  h1 {
+    font-size: 55px;
+  }
+  h2 {
+    font-size: 43px;
+  }
 
-	h1 {
-	font-size: 55px;
-}
-h2 {
-	font-size: 43px;
-}
+  #selectLevel {
+    width: fit-content;
+    height: fit-content;
+  }
 
-#selectLevel {
-	width: fit-content;
-	height: fit-content;
-}
+  .difficultyButtons {
+    text-align: center;
+    width: 70%;
+    height: 100px;
+  }
 
-.difficultyButtons {
-text-align: center;
-width: 70%;
-height: 100px;
-}
+  .questionStyling {
+    text-align: center;
+    width: 90%;
+    height: fit-content;
+    font-size: 25px;
+  }
 
-.questionStyling {
-	text-align: center;
-	width: 90%;
-	height: fit-content;
-	font-size: 25px;
-}
+  .questionTextStyling {
+    font-size: 22px;
+    margin-top: 60px;
+  }
 
-.questionTextStyling {
-	font-size: 22px;
-	margin-top: 60px;
-}
+  .submitButtonStyling {
+    width: fit-content;
+    margin: 30px;
+    font-size: 25px;
+  }
+  .quizResultsStyling {
+    margin-top: 50px;
+    text-align: center;
+    width: 70%;
+    height: 200px;
+    font-size: 25px;
+  }
 
-.submitButtonStyling {
-	width: fit-content;
-	margin: 30px;
-	font-size: 25px;
-}
-.quizResultsStyling {
-	margin-top: 50px;
-	text-align: center;
-	width: 70%;
-	height: 200px;
-	font-size: 25px;
-}
+  .playAgainStyling {
+    font-size: 20px;
+    width: fit-content;
+    margin: 5px;
+  }
 
-.playAgainStyling {
-	font-size: 20px;
-	width: fit-content;
-	margin: 5px;
-}
+  #correctAnswers,
+  #incorrectAnswers {
+    display: block;
+  }
 
-#correctAnswers, #incorrectAnswers {
- display: block;
+  #scoreArea {
+    font-size: 20px;
+  }
 }
-
-#scoreArea {
-	font-size: 20px;
-}
-
-}
-

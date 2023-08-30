@@ -88,6 +88,7 @@
    ![Image showing 1 warning from jsHint](./assets/images/jshint-javascript.png)
 
    - The warning indicates that declaring functions within loops that reference external variables might lead to confusion and unexpected behavior due to variable scope interactions.
+   
    - To address this warning, I could restructure the code by passing variables as function parameters or using closures. These approaches help manage scope and reduce potential ambiguity. However, for the sake of simplicity and clarity within this project, I've chosen to keep the current code structure. Although the warning raises a valid concern, I believe the current code layout remains intuitive and suitable for this project's scope.
 
 
