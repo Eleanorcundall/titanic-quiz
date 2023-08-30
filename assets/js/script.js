@@ -3,12 +3,12 @@
 // Main Question Variable that stores all Questions difficulties
 const questions = getQuestions();
 
-// Variables Created For the Global Scop
+// Variables Created For the Global Scope
 let currentQuestionIndex = 0; // keeps track of current question
 let submitButton; // Makes Sure SubmitButton is Global
 let difficultySelected = "easyQuestions"; // Defaults to easy questions
 
-// Hides the rules untill user clicks 'how to play' button
+// Hides the rules until user clicks 'how to play' button
 let howToPlayButton = document.getElementById("howToPlayButton");
 let howToPlayPopup = document.getElementById("howToPlayPopup");
 
@@ -338,7 +338,7 @@ function getQuestions() {
       {
         question:
           "How long did it take between the moment the Titanic hit the iceberg and the moment it sank?",
-        choices: ["15 Minutes", "2 Hours 40 Minues", "1 hour 15 Minutes"],
+        choices: ["15 Minutes", "2 Hours 40 Minutes", "1 hour 15 Minutes"],
         answer: "1",
       },
       {
@@ -351,14 +351,14 @@ function getQuestions() {
         answer: "0",
       },
       {
-        question: "Who was the Titanics Designer?",
+        question: "Who was the Titanic's Designer?",
         choices: ["Thomas Andrews", "Bruce Ismay", "Edward John Smith"],
         answer: "0",
       },
       {
         question: "How did the Titanic Hit the Iceberg?",
         choices: [
-          "Head on collison",
+          "Head on collision",
           "On the Left, Port side",
           "On the Right, starboard side",
         ],
@@ -388,7 +388,7 @@ function getQuestions() {
       },
       {
         question:
-          "How many of Titanic water tight compartments were breached in the collison?",
+          "How many of Titanic water tight compartments were breached in the collision?",
         choices: ["3", "4", "6"],
         answer: "2",
       },
