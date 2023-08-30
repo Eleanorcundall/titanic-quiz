@@ -138,9 +138,11 @@ function checkAnswer() {
     } else {
       endQuiz();
     }
-    document
-      .getElementsByName("choices")
-      [selectedAnswerIndex].parentElement.classList.remove(answerClass);
+     let selectedChoice =
+       document.getElementsByName("choices")[selectedAnswerIndex];
+     if (selectedChoice != "undefined" && selectedChoice != null) {
+       selectedChoice.parentElement.classList.remove(answerClass);
+     }
   }, 1000);
 }
 
